@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNN Filtr O‘lchami</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+<h1>CNN-larda Filtr O‘lchamini Tanlash Usullari</h1>
+
+<p>Konvolyutsion neyron tarmoqlarda (CNN) filtrlarning o‘lchamini tanlash modelning aniqligi va samaradorligini ta’minlash uchun muhimdir. Quyida filtr o‘lchamini tanlashning asosiy usullari keltirilgan:</p>
+
+<h2>1. Standart O‘lchamlar</h2>
+<p>Amaliyotda filtrlar uchun quyidagi standart o‘lchamlar keng qo‘llaniladi:</p>
+<ul>
+    <li><strong>3x3:</strong> Eng ko‘p qo‘llaniladigan o‘lcham. Kichik qamrovga ega bo‘lsa ham, bir nechta qatlamlarda birlashib kengroq kontekstni o‘rganadi.</li>
+    <li><strong>5x5:</strong> Bir oz katta kontekstni o‘rganish uchun ishlatiladi, lekin hisoblash xarajati yuqoriroq.</li>
+    <li><strong>7x7 yoki undan katta:</strong> Juda keng qamrovli kontekst uchun ishlatiladi, lekin resurslarni ko‘proq talab qiladi.</li>
+</ul>
+
+<h2>2. Maqsadli Qamrovga Asoslanish</h2>
+<p>Filtr o‘lchamini tanlashda kiruvchi tasvirdagi qamrov darajasi hisobga olinadi. Masalan:</p>
+<ul>
+    <li>Agar maqsad kichik xususiyatlarni (masalan, burchaklar yoki chiziqlarni) o‘rganish bo‘lsa, kichik filtrlar (3x3) tanlanadi.</li>
+    <li>Agar maqsad yirikroq xususiyatlarni o‘rganish bo‘lsa, katta filtrlar (5x5 yoki 7x7) tanlanadi.</li>
+</ul>
+
+<h2>3. Tarmoqning Chuqurligiga Moslash</h2>
+<p>Filtr o‘lchamini tarmoq chuqurligiga qarab tanlash samarali bo‘lishi mumkin:</p>
+<ul>
+    <li>Yuqori qatlamlarda kichik filtrlar (<strong>3x3</strong>) ishlatiladi, chunki ularda kichik detallar ahamiyatlidir.</li>
+    <li>Quyi qatlamlarda katta filtrlar (<strong>5x5</strong>) ishlatiladi, chunki kengroq kontekstga ehtiyoj bor.</li>
+</ul>
+
+<h2>4. Ishlab Chiqarilgan Tuzilmalar</h2>
+<p>Ba'zi modellarda filtr o‘lchami avtomatik ravishda tanlanadi yoki kombinatsiya qilinadi:</p>
+<ul>
+    <li><strong>Inception moduli:</strong> Har xil o‘lchamdagi filtrlarni bir qatorda ishlatib, bir nechta kontekstni qamrab oladi.</li>
+    <li><strong>ResNet:</strong> Ko‘proq kichik filtrlar bilan ishlaydi, lekin skip-connectionlar yordamida chuqurlikni oshiradi.</li>
+</ul>
+
+<h2>5. Eksperiment va Validatsiya</h2>
+<p>Filtr o‘lchamini tanlashning eng yaxshi usuli — turli konfiguratsiyalarni sinab ko‘rish va validatsiya to‘plamidagi natijalarni baholashdir. Sinovlar davomida quyidagilar e’tiborga olinadi:</p>
+<ul>
+    <li>Model aniqligi</li>
+    <li>Hisoblash resurslari</li>
+    <li>Overfitting xavfi</li>
+</ul>
+
+<p>Filtr o‘lchamini optimal tanlash CNNning samaradorligi va aniqligini oshirishga yordam beradi.</p>
+
+</body>
+</html>
