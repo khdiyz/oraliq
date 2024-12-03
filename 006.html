@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReLU va Uning Turlari</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        h2 {
+            color: #16a085;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .formula {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #ecf0f1;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ReLU va Uning Turlari</h1>
+    <p>ReLU (Rectified Linear Unit) va uning modifikatsiyalari neyron tarmoqlarda tezroq va samaraliroq o‘rgatish imkonini beradi. Quyida ular qanday ishlashi va afzalliklari ko‘rsatilgan:</p>
+
+    <h2>1. ReLU (Rectified Linear Unit)</h2>
+    <p><strong>Formulasi:</strong> <span class="formula">f(x) = max(0, x)</span></p>
+    <p><strong>Qanday ishlaydi:</strong> 
+        Kiruvchi qiymat ijobiy bo‘lsa, uning qiymatini o‘z holicha qoldiradi. Manfiy qiymatlar esa nolga aylantiriladi.
+    </p>
+    <p><strong>Afzalliklari:</strong></p>
+    <ul>
+        <li>Oddiy va samarali.</li>
+        <li>Gradientning yo‘qolishi muammosini kamaytiradi.</li>
+    </ul>
+    <p><strong>Kamchiliklari:</strong> 
+        "O‘lik neyronlar" muammosi, ya’ni manfiy kiruvchi qiymatlarda gradient nolga teng bo‘lib, neyronni o‘rganishga qodir qilmaydi.
+    </p>
+
+    <h2>2. Leaky ReLU</h2>
+    <p><strong>Formulasi:</strong> <span class="formula">f(x) = x (x > 0), ax (x ≤ 0)</span>, bu yerda <code>a</code> kichik ijobiy son (odatda <code>0.01</code>).</p>
+    <p><strong>Qanday ishlaydi:</strong> 
+        Manfiy qiymatlar nolga aylantirilmasdan, kichik hajmda o‘tkaziladi. Bu "o‘lik neyronlar" muammosini hal qiladi.
+    </p>
+    <p><strong>Afzalliklari:</strong></p>
+    <ul>
+        <li>ReLUning oddiyligi saqlanadi.</li>
+        <li>Manfiy qiymatlarga kichik gradient beradi, bu esa neyronlarning faol bo‘lib qolishini ta’minlaydi.</li>
+    </ul>
+
+    <h2>3. Parametrik ReLU (PReLU)</h2>
+    <p><strong>Formulasi:</strong> <span class="formula">f(x) = x (x > 0), a * x (x ≤ 0)</span>, bu yerda <code>a</code> o‘rganiladigan parametr.</p>
+    <p><strong>Qanday ishlaydi:</strong> 
+        Manfiy qiymatlar uchun <code>a</code> parametri neyron tarmoqni o‘rgatish jarayonida moslashtiriladi, bu tarmoqning moslashuvchanligini oshiradi.
+    </p>
+    <p><strong>Afzalliklari:</strong></p>
+    <ul>
+        <li>O‘rganiladigan parametr orqali tarmoqning ishlashini optimallashtiradi.</li>
+        <li>Manfiy va ijobiy qiymatlarga yaxshiroq moslashadi.</li>
+    </ul>
+
+    <h2>Qo‘llanilish sohasi</h2>
+    <p>ReLU va uning turlari ko‘pincha chuqur neyron tarmoqlarda, ayniqsa konvolyutsion neyron tarmoqlar (CNN) va rekurrent neyron tarmoqlar (RNN) uchun ishlatiladi. Har bir funksiya tanlanishi modelning turiga va muammoga bog‘liq.</p>
+</body>
+</html>

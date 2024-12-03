@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigmoid va Tanh Funksiyalari Farqlari</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #34495e;
+            color: #ecf0f1;
+        }
+        td {
+            background-color: #ecf0f1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sigmoid va Giperbolik Tangens (Tanh) Funksiyalari Farqlari</h1>
+    <p>Sigmoid va Tanh funksiyalari neyron tarmoqlarda nolinearlikni kiritish uchun ishlatiladi, ammo ularning ishlash xususiyatlari turlicha. Quyida ularning asosiy farqlari ko‘rsatilgan:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Xususiyat</th>
+                <th>Sigmoid Funksiyasi</th>
+                <th>Tanh Funksiyasi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Matematik formulasi</td>
+                <td><code>f(x) = 1 / (1 + e^(-x))</code></td>
+                <td><code>f(x) = (e^x - e^(-x)) / (e^x + e^(-x))</code></td>
+            </tr>
+            <tr>
+                <td>Qiymatlar oralig‘i</td>
+                <td>0 dan 1 gacha</td>
+                <td>-1 dan 1 gacha</td>
+            </tr>
+            <tr>
+                <td>O‘rtacha chiqish qiymati</td>
+                <td>Pozitiv tomon: 0.5 (chuqur qatlamlarda bu qiyinchilik tug‘dirishi mumkin).</td>
+                <td>Nol: Bu simmetriklik neyron tarmoqni tezroq o‘rgatishga yordam beradi.</td>
+            </tr>
+            <tr>
+                <td>Gradientning yo‘qolishi</td>
+                <td>Gradientning yo‘qolishi muammosi yuqori qatlamlarda kuchliroq seziladi.</td>
+                <td>Gradientning yo‘qolishi muammosi Sigmoidga qaraganda kamroq kuzatiladi.</td>
+            </tr>
+            <tr>
+                <td>Qo‘llaniladigan soha</td>
+                <td>Ehtimollikni ifodalashda yoki oxirgi qatlamda ishlatiladi.</td>
+                <td>O‘rta qatlamlarda ishlatiladi, ayniqsa, noldan farqli chiqish kerak bo‘lgan holatlarda.</td>
+            </tr>
+            <tr>
+                <td>Afzalliklari</td>
+                <td>Oddiy va intuitiv ishlash.</td>
+                <td>Simmetrik va yaxshi konvergentsiyani ta’minlaydi.</td>
+            </tr>
+            <tr>
+                <td>Kamchiliklari</td>
+                <td>Gradientning yo‘qolishi va chiqishning nolga yaqinlashishi.</td>
+                <td>Gradientning yo‘qolishi muammosi hali ham mavjud, lekin Sigmoidga qaraganda kamroq.</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Umuman olganda, Tanh Sigmoidga nisbatan tezroq va aniqroq natijalarga erishishga yordam beradi, ayniqsa, ma’lumotlar manfiy va ijobiy qiymatlarni o‘z ichiga olgan bo‘lsa.</p>
+</body>
+</html>
