@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeNet, AlexNet, VGG Arxitekturalari</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+<h1>LeNet, AlexNet, VGG Arxitekturalari</h1>
+
+<p>LeNet, AlexNet va VGG konvolyutsion neyron tarmoqlarning (<strong>CNN</strong>) mashhur arxitekturalaridir. Har biri ma’lum vazifalarni hal qilish uchun mo‘ljallangan va ular tasvirlarni tanish, qayta ishlash va tasniflashda keng qo‘llaniladi.</p>
+
+<h2>1. LeNet</h2>
+<ul>
+    <li><strong>Yaratilgan yil:</strong> 1989</li>
+    <li><strong>Muallifi:</strong> Yann LeCun</li>
+    <li><strong>Vazifasi:</strong> Raqamlarni tanish.</li>
+    <li><strong>Qo‘llanilish sohasi:</strong> Qo‘l yozuvi va bank cheklarini raqamli tahlil qilish.</li>
+</ul>
+<p>LeNet oddiy arxitektura bo‘lib, unda ketma-ket konvolyutsiya, pooling va to‘liq bog‘langan qatlamlar mavjud. Ushbu arxitektura MNIST datasetida 28x28 o‘lchamdagi tasvirlarni tasniflashda samarali ishlaydi.</p>
+
+<h3>Arxitektura Tuzilmasi:</h3>
+<pre>
+Input → Conv → Pool → Conv → Pool → FC → Output
+</pre>
+
+<h2>2. AlexNet</h2>
+<ul>
+    <li><strong>Yaratilgan yil:</strong> 2012</li>
+    <li><strong>Muallifi:</strong> Alex Krizhevsky, Ilya Sutskever, Geoffrey Hinton</li>
+    <li><strong>Vazifasi:</strong> Katta hajmdagi tasvirlarni tasniflash.</li>
+    <li><strong>Qo‘llanilish sohasi:</strong> ImageNet musobaqalari va umumiy tasvirlarni tanish tizimlari.</li>
+</ul>
+<p>AlexNet LeNetdan farqli o‘laroq, chuqurroq qatlamlarga va ReLU aktivatsiya funktsiyalariga ega bo‘lib, GPU yordamida parallel hisoblash imkonini beradi.</p>
+
+<h3>Arxitektura Tuzilmasi:</h3>
+<pre>
+Input → Conv → ReLU → Pool → Conv → ReLU → Pool → FC → Output
+</pre>
+<p><strong>Innovatsiyalar:</strong></p>
+<ul>
+    <li>Dropout qatlami bilan overfittingni kamaytirish.</li>
+    <li>ReLU aktivatsiyasi bilan hisoblashni tezlashtirish.</li>
+</ul>
+
+<h2>3. VGG</h2>
+<ul>
+    <li><strong>Yaratilgan yil:</strong> 2014</li>
+    <li><strong>Muallifi:</strong> Visual Geometry Group (VGG), Oksford universiteti.</li>
+    <li><strong>Vazifasi:</strong> Yuqori aniqlikdagi tasvirlarni tasniflash.</li>
+    <li><strong>Qo‘llanilish sohasi:</strong> Katta miqyosli tasniflash va xususiyatlarni chiqarish.</li>
+</ul>
+<p>VGG chuqur konvolyutsion tarmoqlarni qo‘llagan holda har bir qatlamda 3x3 o‘lchamdagi filtrlar ishlatadi. Bu arxitektura oddiy, lekin juda kuchli dizaynga ega.</p>
+
+<h3>Arxitektura Tuzilmasi:</h3>
+<pre>
+Input → [Conv → ReLU] x N → Pool → [Conv → ReLU] x M → Pool → FC → Output
+</pre>
+<p><strong>Innovatsiyalar:</strong></p>
+<ul>
+    <li>Chuqurlikni oshirish orqali yuqori aniqlik.</li>
+    <li>Kichikroq filtrlardan foydalanib, ko‘proq kontekstni qamrab olish.</li>
+</ul>
+
+<h2>Xulosa</h2>
+<p>LeNet, AlexNet va VGG o‘z davrining muhim arxitekturalari bo‘lib, tasvirni qayta ishlashning turli darajadagi vazifalarida muvaffaqiyatli qo‘llaniladi. Ular CNN arxitekturalari rivojlanishida asosiy bosqichlarni ifodalaydi.</p>
+
+</body>
+</html>
