@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faollashtirish Funksiyalarining Asosiy Turlari va Ularning Vazifalari</title>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+        .answer {
+            margin-top: 10px;
+        }
+        .code {
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            font-family: Consolas, "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>4. Faollashtirish Funksiyalarining Asosiy Turlari va Ularning Vazifalari</h1>
+
+    <h2>Faollashtirish Funksiyasi Nima?</h2>
+    <p><strong>Faollashtirish funksiyasi</strong> neyron tarmog‘ida ma'lumotni qayta ishlash uchun ishlatiladigan matematik funktsiyadir. U neyronning kirish qiymatini qabul qiladi va bu qiymatni chiqishga aylantiradi. Bu funksiya tarmoqni o‘rganishda va murakkab muammolarni yechishda muhim rol o‘ynaydi.</p>
+
+    <h2>Faollashtirish Funksiyalarining Asosiy Turlari</h2>
+    <p>Faollashtirish funksiyalari bir nechta turlarga bo‘linadi. Har bir turi o‘zining xususiyatlari va qo‘llanilish joylariga ega.</p>
+
+    <h3>1. Sigmoid (Logistik) Funksiya</h3>
+    <p><strong>Sigmoid</strong> funktsiyasi neyron tarmog‘ida eng keng tarqalgan faollashtirish funksiyalaridan biridir. Bu funksiya kiruvchi qiymatni [0, 1] oralig‘ida chiqaradi.</p>
+    <p><strong>Formulasi:</strong></p>
+    <p>
+        $$f(x) = \frac{1}{1 + e^{-x}}$$
+    </p>
+    <p>Bu funksiya asosan ikki klassli tasniflash muammolarida ishlatiladi, chunki chiqish qiymati 0 va 1 orasida bo‘ladi.</p>
+
+    <h3>2. Hyperbolik Tangens (Tanh) Funksiyasi</h3>
+    <p><strong>Hyperbolik Tangens</strong> funktsiyasi kiruvchi qiymatni [-1, 1] oralig‘ida chiqaradi. U sigmoiddan farqli ravishda asimmetrik bo‘lib, neyron tarmog‘ining o‘rganish qobiliyatini yaxshilaydi.</p>
+    <p><strong>Formulasi:</strong></p>
+    <p>
+        $$f(x) = \tanh(x) = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}$$
+    </p>
+    <p>Bu funksiya asosan neyron tarmoqlarida yashirin qatlamlarda qo‘llaniladi.</p>
+
+    <h3>3. ReLU (Rectified Linear Unit) Funksiyasi</h3>
+    <p><strong>ReLU</strong> (Rectified Linear Unit) faollashtirish funksiyasi hozirgi vaqtda eng ko‘p ishlatiladigan faollashtirish funksiyasidir. U kiruvchi qiymatning manfiy qismini nolga o‘zgartirib, musbat qismini saqlaydi.</p>
+    <p><strong>Formulasi:</strong></p>
+    <p>
+        $$f(x) = \max(0, x)$$
+    </p>
+    <p>ReLU funksiyasi tez ishlashini ta'minlaydi va gradientlar yo‘qolishi muammosini kamaytiradi.</p>
+
+    <h3>4. Leaky ReLU Funksiyasi</h3>
+    <p><strong>Leaky ReLU</strong> funksiyasi ReLU'ning takomillashtirilgan versiyasidir. Bu funksiya manfiy qiymatlar uchun kichik bir gradient beradi, bu esa tarmoqni o‘rganishda ba'zi neyronlarning o‘lik bo‘lishining oldini oladi.</p>
+    <p><strong>Formulasi:</strong></p>
+    <p>
+        $$f(x) = \max(\alpha x, x), \quad \text{where} \quad \alpha \text{ is a small constant}$$
+    </p>
+    <p>Leaky ReLU ReLU funktsiyasiga o‘xshaydi, faqat manfiy qiymatlar uchun kichik bir gradient qo‘shiladi.</p>
+
+    <h3>5. Softmax Funksiyasi</h3>
+    <p><strong>Softmax</strong> funksiyasi ko‘p klassli tasniflash muammolarida qo‘llaniladi. Bu funksiya chiqish qatlamining har bir neyroni uchun ehtimollikni hisoblaydi. Natijada chiqishlarning jami 1 ga teng bo‘ladi.</p>
+    <p><strong>Formulasi:</strong></p>
+    <p>
+        $$f(x_i) = \frac{e^{x_i}}{\sum_{j} e^{x_j}}$$
+    </p>
+    <p>Softmax tasniflash tizimlarida, ayniqsa ko‘p klassli tasniflashda, juda foydalidir.</p>
+
+    <h2>Faollashtirish Funksiyalarining Vazifalari</h2>
+    <p>Faollashtirish funksiyasining vazifalari quyidagilar:</p>
+    <ul>
+        <li><strong>Ma'lumotlarni normalizatsiya qilish:</strong> Faollashtirish funktsiyalari kiruvchi ma'lumotlarni ma'lum bir oralig‘ga keltiradi. Bu o‘rganish jarayonini tezlashtiradi.</li>
+        <li><strong>Modelning murakkabligini oshirish:</strong> Faollashtirish funksiyalari orqali neyron tarmoqlar o‘rganishning murakkabligini oshiradi, bu esa modelni haqiqiy dunyo muammolariga yaxshiroq moslashtiradi.</li>
+        <li><strong>Gradientlarni hisoblash:</strong> Faollashtirish funksiyasi orqali neyronlarning gradenti hisoblanadi, bu esa gradientni tushirishda yordam beradi.</li>
+    </ul>
+
+</body>
+</html>
