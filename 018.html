@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konvolyutsion qatlam filtrlari</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Konvolyutsion qatlamning filtrlari nima va qanday rol o‘ynaydi?</h1>
+    <p><strong>Konvolyutsion qatlam filtrlari</strong> — bu kichik hajmli matritsalar bo‘lib, ular asosan tasvirlar yoki boshqa ma'lumotlar ustida operatsiyalar bajarish uchun ishlatiladi. Har bir filtr ma'lum bir xususiyatni, masalan, chetlarni, teksturani yoki rangni aniqlash uchun mo‘ljallangan.</p>
+    
+    <h2>Filtrning roli</h2>
+    <p>Filtrlar kirish ma'lumotlarini (odatda tasvir) kichik qismga bo‘lib, har bir qismdan xususiyatlarni chiqarib olishda yordam beradi. Konvolyutsion qatlamda filtr bilan tasvir o‘rtasida <strong>konvolyutsiya amali</strong> bajariladi. Bu jarayon natijasida <em>feature map</em> (xususiyat xaritasi) hosil bo‘ladi.</p>
+    
+    <h2>Konvolyutsiya amali</h2>
+    <p>Konvolyutsiya quyidagi formula bo‘yicha amalga oshiriladi:</p>
+    <p style="text-align: center;">
+        $$ (X * W)(i, j) = \sum_{m=1}^{M} \sum_{n=1}^{N} X(i+m-1, j+n-1) \cdot W(m, n) $$
+    </p>
+    <p>Bu yerda:</p>
+    <ul>
+        <li>\(X\) — kirish ma'lumotlarining bir qismi (tasvir).</li>
+        <li>\(W\) — filtrning og‘irliklari.</li>
+        <li>\((i, j)\) — xususiyat xaritasidagi nuqta koordinatalari.</li>
+        <li>\(M\) va \(N\) — filtrning o‘lchamlari.</li>
+    </ul>
+    
+    <h2>Filtrlar turlari</h2>
+    <p>Turli filtrlar turli xususiyatlarni aniqlash uchun ishlatiladi:</p>
+    <ul>
+        <li><strong>Edge detection:</strong> Chetlarni aniqlash uchun.</li>
+        <li><strong>Blur:</strong> Tasvirni silliqlashtirish uchun.</li>
+        <li><strong>Sharpen:</strong> Tasvirni aniqroq ko‘rsatish uchun.</li>
+    </ul>
+    
+    <h2>Xulosa</h2>
+    <p>Filtrlar konvolyutsion qatlamlarning asosiy elementi bo‘lib, ular yordamida ma'lumotdan muhim xususiyatlarni chiqarib olish va tahlil qilish amalga oshiriladi. Har bir filtr ma'lumotni tahlil qilishning o‘ziga xos nuqtai nazarini taqdim etadi, bu esa chuqur o‘qitishning samarali ishlashiga yordam beradi.</p>
+</body>
+</html>
