@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Softmax Funksiyasi</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          margin: 20px;
+      }
+      h1 {
+          color: #2c3e50;
+      }
+      ul {
+          margin-left: 20px;
+      }
+      li {
+          margin-bottom: 10px;
+      }
+      .formula {
+          font-family: 'Courier New', Courier, monospace;
+          background-color: #ecf0f1;
+          padding: 2px 5px;
+          border-radius: 4px;
+      }
+  </style>
+</head>
+<body>
+<h1>Softmax Faollashtirish Funksiyasi</h1>
+<p><strong>Softmax</strong> funksiyasi neyron tarmoqlarda ma’lum bir klassga tegishli ehtimolliklarni hisoblash uchun ishlatiladi. Bu funksiya kiruvchi qiymatlarni ehtimolliklar taqsimotiga aylantiradi, ya’ni har bir qiymat 0 va 1 oralig‘ida bo‘ladi va barcha qiymatlar yig‘indisi 1 ga teng.</p>
+
+<p><strong>Formulasi:</strong></p>
+<p class="formula">f(x<sub>i</sub>) = e<sup>x<sub>i</sub></sup> / Σe<sup>x<sub>j</sub></sup></p>
+
+<h2>Softmax Funksiyasi Qaysi Vazifalarda Qo‘llaniladi?</h2>
+<ul>
+  <li>
+    <strong>Klassifikatsiya vazifalari:</strong>
+    Softmax ko‘pincha ko‘p klassli klassifikatsiya vazifalarida ishlatiladi. Masalan, tasvir klassifikatsiyasida neyron tarmoq har bir klass uchun ehtimollikni hisoblaydi va eng yuqori ehtimollikni tanlaydi.
+  </li>
+  <li>
+    <strong>Ko‘p klassli chiqishlar:</strong>
+    Neyron tarmoqning oxirgi qatlamida, ayniqsa, bir nechta klassdan birini tanlash kerak bo‘lganda, Softmax foydalaniladi.
+  </li>
+  <li>
+    <strong>Ehtimollik taqsimoti yaratish:</strong>
+    Softmax kiruvchi qiymatlarni ehtimollik taqsimotiga aylantirish uchun ishlatiladi. Bu, masalan, dialog tizimlari yoki tavsiya tizimlarida tanlovlarni baholash uchun foydali.
+  </li>
+  <li>
+    <strong>Til modellashtirish:</strong>
+    Rekurrent neyron tarmoqlarda (RNN) yoki Transformer arxitekturalarida, Softmax keyingi so‘zni tanlash ehtimolini hisoblash uchun ishlatiladi.
+  </li>
+  <li>
+    <strong>O‘yin strategiyalarida:</strong>
+    Softmax o‘yin nazariyasida va o‘yinchilar tanlov ehtimollarini baholash uchun ishlatiladi, ayniqsa kuchli strategiyalarni aniqlashda.
+  </li>
+</ul>
+
+<h2>Afzalliklari:</h2>
+<ul>
+  <li>Chiqishlarni ehtimollik shaklida beradi.</li>
+  <li>Ko‘p klassli vazifalar uchun mos.</li>
+</ul>
+
+<h2>Kamchiliklari:</h2>
+<ul>
+  <li>Katta qiymatlar farqi mavjud bo‘lganda kichik ehtimolliklar nolga yaqinlashishi mumkin.</li>
+  <li>Ba’zan ehtimolliklarni haddan tashqari moslashgan qilib beradi.</li>
+</ul>
+</body>
+</html>

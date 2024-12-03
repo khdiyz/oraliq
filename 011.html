@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Tushishi Algoritmi</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          margin: 20px;
+      }
+      h1 {
+          color: #2c3e50;
+      }
+      ul {
+          margin-left: 20px;
+      }
+      li {
+          margin-bottom: 10px;
+      }
+      .formula {
+          font-family: 'Courier New', Courier, monospace;
+          background-color: #ecf0f1;
+          padding: 2px 5px;
+          border-radius: 4px;
+      }
+  </style>
+</head>
+<body>
+<h1>Gradient Tushishi Algoritmi</h1>
+<p><strong>Gradient tushishi</strong> algoritmi neyron tarmoqni o‘rgatishda og‘irliklarni yangilash uchun ishlatiladigan asosiy optimallashtirish usullaridan biridir. Bu algoritm yo‘qotish funksiyasining gradientlarini hisoblash orqali xatolikni minimallashtirishga qaratilgan.</p>
+
+<h2>Gradient Tushishi Algoritmining Asosiy Bosqichlari:</h2>
+<ol>
+  <li>
+    <strong>1. Yo‘qotish funksiyasini aniqlash:</strong>
+    <p>Modelning xatosini o‘lchash uchun yo‘qotish funksiyasi (<code>L</code>) tanlanadi. Masalan, regressiya uchun <em>Mean Squared Error</em>, klassifikatsiya uchun <em>Cross-Entropy Loss</em> qo‘llaniladi.</p>
+  </li>
+  <li>
+    <strong>2. Gradientni hisoblash:</strong>
+    <p>Yo‘qotish funksiyasining og‘irliklar (<code>W</code>) va biaslar (<code>b</code>) bo‘yicha hosilasi hisoblanadi:</p>
+    <p class="formula">∂L/∂W va ∂L/∂b</p>
+  </li>
+  <li>
+    <strong>3. Og‘irliklarni yangilash:</strong>
+    <p>Og‘irliklar gradientlar yordamida yangilanadi:</p>
+    <p class="formula">W = W - η * ∂L/∂W</p>
+    <p class="formula">b = b - η * ∂L/∂b</p>
+    <p>Bu yerda:</p>
+    <ul>
+      <li><code>W</code> - og‘irliklar matrisi.</li>
+      <li><code>b</code> - bias vektor.</li>
+      <li><code>η</code> - o‘rganish sur’ati (learning rate).</li>
+    </ul>
+  </li>
+  <li>
+    <strong>4. Takrorlash:</strong>
+    <p>Yuqoridagi qadamlar har bir o‘quv namunasi yoki mini-to‘plam uchun takrorlanadi. Algoritm yo‘qotish funksiyasi minimal qiymatga yetgunga qadar davom etadi.</p>
+  </li>
+</ol>
+
+<h2>Gradient Tushishining Turlari:</h2>
+<ul>
+  <li>
+    <strong>1. Stoxastik Gradient Tushishi (SGD):</strong>
+    <p>Har bir o‘quv namunasi uchun gradient hisoblanadi va og‘irliklar yangilanadi. Bu usul tezroq, lekin notekis yo‘l bilan konvergensiya qiladi.</p>
+  </li>
+  <li>
+    <strong>2. Mini-Batch Gradient Tushishi:</strong>
+    <p>Ma’lumotlar kichik to‘plamlarga bo‘linadi va har bir to‘plam uchun gradient hisoblanadi. Bu usul SGD va to‘liq gradient tushishi o‘rtasida muvozanatni ta’minlaydi.</p>
+  </li>
+  <li>
+    <strong>3. To‘liq Gradient Tushishi:</strong>
+    <p>Barcha o‘quv ma’lumotlari uchun yo‘qotish funksiyasining gradienti hisoblanadi. Bu aniqlikni oshiradi, lekin ko‘proq vaqt talab qiladi.</p>
+  </li>
+</ul>
+
+<h2>Afzalliklari:</h2>
+<ul>
+  <li>Oddiy va tushunarli algoritm.</li>
+  <li>Xatolarni minimallashtirishga samarali yordam beradi.</li>
+</ul>
+
+<h2>Kamchiliklari:</h2>
+<ul>
+  <li>O‘rganish sur’ati noto‘g‘ri tanlansa, konvergensiya sekinlashishi yoki qiyinlashishi mumkin.</li>
+  <li>Juda chuqur tarmoqlarda gradientlarning yo‘qolishi muammosi yuzaga kelishi mumkin.</li>
+</ul>
+
+<p>Gradient tushishi algoritmi chuqur o‘rgatishning asosiy elementlaridan biridir. Ushbu algoritmni turli o‘rganish sur’atlari va optimallashtirish strategiyalari bilan birga qo‘llash neyron tarmoqning samaradorligini oshirishga yordam beradi.</p>
+</body>
+</html>

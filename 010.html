@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orqaga Tarqalish (Backpropagation)</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          margin: 20px;
+      }
+      h1 {
+          color: #2c3e50;
+      }
+      ul {
+          margin-left: 20px;
+      }
+      li {
+          margin-bottom: 10px;
+      }
+      .formula {
+          font-family: 'Courier New', Courier, monospace;
+          background-color: #ecf0f1;
+          padding: 2px 5px;
+          border-radius: 4px;
+      }
+  </style>
+</head>
+<body>
+<h1>Orqaga Tarqalish (Backpropagation)</h1>
+<p><strong>Orqaga tarqalish</strong> (backpropagation) algoritmi neyron tarmoqni o‘rgatish uchun ishlatiladigan asosiy usullardan biridir. Bu jarayon yo‘qotish funksiyasi asosida neyron tarmoq og‘irliklarini yangilash orqali xatoni minimallashtirishga qaratilgan.</p>
+
+<h2>Orqaga Tarqalish Jarayoni:</h2>
+<ol>
+  <li>
+    <strong>1. Oldinga tarqalish:</strong>
+    <p>Kiruvchi ma’lumotlar neyron tarmoqdan o‘tkazilib, chiqish qiymati (<code>y_pred</code>) hisoblanadi.</p>
+  </li>
+  <li>
+    <strong>2. Yo‘qotish funksiyasini hisoblash:</strong>
+    <p>Model chiqishi (<code>y_pred</code>) va haqiqiy qiymatlar (<code>y_true</code>) o‘rtasidagi farqni hisoblash uchun yo‘qotish funksiyasi qo‘llaniladi:</p>
+    <p class="formula">L = loss(y_true, y_pred)</p>
+  </li>
+  <li>
+    <strong>3. Xatoning tarmoqqa ta’sirini aniqlash:</strong>
+    <p>Yo‘qotish funksiyasining tarmoqning har bir parametri (og‘irliklar va biaslar) bo‘yicha hosilalari hisoblanadi. Bu jarayon gradientlarni hisoblash deb ataladi.</p>
+  </li>
+  <li>
+    <strong>4. Gradientsni hisoblash:</strong>
+    <p>Gradientlar zanjir qoidasi yordamida hisoblanadi:</p>
+    <p class="formula">∂L/∂W = ∂L/∂a * ∂a/∂z * ∂z/∂W</p>
+    <p>Bu yerda:</p>
+    <ul>
+      <li><code>∂L/∂W</code> - og‘irliklar bo‘yicha yo‘qotish funksiyasining hosilasi.</li>
+      <li><code>∂a/∂z</code> - faollashtirish funksiyasi bo‘yicha hosila.</li>
+      <li><code>∂z/∂W</code> - og‘irliklar bo‘yicha kirish qiymatlarining hosilasi.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>5. Og‘irliklarni yangilash:</strong>
+    <p>Og‘irliklar gradientlar yordamida yangilanadi:</p>
+    <p class="formula">W = W - η * ∂L/∂W</p>
+    <p>Bu yerda:</p>
+    <ul>
+      <li><code>W</code> - og‘irliklar matrisi.</li>
+      <li><code>η</code> - o‘rganish sur’ati (learning rate).</li>
+      <li><code>∂L/∂W</code> - yo‘qotish funksiyasining og‘irliklar bo‘yicha gradienti.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>6. Qadamlarni takrorlash:</strong>
+    <p>Har bir qatlam uchun yuqoridagi qadamlar takrorlanadi, xatolar yuqoridan pastga (chiqishdan kirishga) tarqaladi.</p>
+  </li>
+</ol>
+
+<h2>Orqaga Tarqalishning Muhim Elementlari:</h2>
+<ul>
+  <li><strong>Zanjir qoidasi:</strong> Gradientlarni hisoblashda zanjir qoidasi asosida hosilalar topiladi.</li>
+  <li><strong>Yo‘qotish funksiyasi:</strong> Xatoni minimallashtirish uchun asosiy o‘lchov.</li>
+  <li><strong>O‘rganish sur’ati:</strong> Og‘irliklarni qanchalik katta yoki kichik qadam bilan yangilashni belgilaydi.</li>
+</ul>
+
+<h2>Afzalliklari:</h2>
+<ul>
+  <li>Tarmoqni samarali va nisbatan tez o‘rgatadi.</li>
+  <li>Gradient asosida optimallashtirishni amalga oshiradi.</li>
+</ul>
+
+<h2>Kamchiliklari:</h2>
+<ul>
+  <li>Juda chuqur tarmoqlarda gradientning yo‘qolishi yoki o‘sishi muammosi yuzaga kelishi mumkin.</li>
+  <li>O‘rganish sur’ati noto‘g‘ri tanlangan bo‘lsa, tarmoq o‘rgatish qiyinlashadi.</li>
+</ul>
+
+<p>Orqaga tarqalish algoritmi chuqur o‘rgatish modellari muvaffaqiyatining asosiy omillaridan biridir. Uning samaradorligi gradientni hisoblash va optimallashtirish algoritmlariga bog‘liq.</p>
+</body>
+</html>
