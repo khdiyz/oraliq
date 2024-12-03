@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neyron Tarmoqlarda Oldinga Tarqalish Jarayoni</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          margin: 20px;
+      }
+      h1 {
+          color: #2c3e50;
+      }
+      ul {
+          margin-left: 20px;
+      }
+      li {
+          margin-bottom: 10px;
+      }
+      .formula {
+          font-family: 'Courier New', Courier, monospace;
+          background-color: #ecf0f1;
+          padding: 2px 5px;
+          border-radius: 4px;
+      }
+  </style>
+</head>
+<body>
+<h1>Neyron Tarmoqlarda Oldinga Tarqalish Jarayoni</h1>
+<p><strong>Oldinga tarqalish</strong> (forward propagation) - bu neyron tarmoqda kiruvchi ma’lumotlarni qatlamlar orqali o‘tkazib, chiqish qiymatini hisoblash jarayoni. Ushbu jarayon neyron tarmoqning qanday ishlashini anglash uchun muhimdir.</p>
+
+<h2>Oldinga Tarqalish Qadamlar:</h2>
+<ul>
+  <li>
+    <strong>1. Kiruvchi qiymatlarni kiritish:</strong>
+    <p>Ma’lumotlar neyron tarmoqning birinchi qatlamiga (kirish qatlamiga) uzatiladi. Bu kirish <code>X</code> vektor ko‘rinishida ifodalanadi.</p>
+  </li>
+  <li>
+    <strong>2. Og‘irliklar bilan ko‘paytirish:</strong>
+    <p>Har bir neyron uchun kirish qiymatlari <code>W</code> og‘irliklar bilan ko‘paytiriladi va <code>b</code> bias qiymatlari qo‘shiladi:</p>
+    <p class="formula">z = W * X + b</p>
+  </li>
+  <li>
+    <strong>3. Faollashtirish funksiyasi:</strong>
+    <p>Hisoblangan <code>z</code> qiymatlari nolinearlikni kiritish uchun faollashtirish funksiyasidan o‘tkaziladi:</p>
+    <p class="formula">a = activation(z)</p>
+    <p>Bu funksiya, masalan, <em>ReLU</em>, <em>Sigmoid</em>, yoki <em>Tanh</em> bo‘lishi mumkin.</p>
+  </li>
+  <li>
+    <strong>4. Qatlamlar orqali tarqalish:</strong>
+    <p>Har bir qatlamdagi chiqish keyingi qatlam uchun kirish qiymatlariga aylanadi. Ushbu jarayon tarmoqning barcha yashirin qatlamlarida davom etadi.</p>
+  </li>
+  <li>
+    <strong>5. Chiqish qatlamiga yetish:</strong>
+    <p>Tarmoqning oxirgi qatlamida natija hisoblanadi. Ko‘p hollarda bu <em>Softmax</em> yoki boshqa maxsus faollashtirish funksiyasi yordamida amalga oshiriladi.</p>
+  </li>
+</ul>
+
+<h2>Matematik Ifoda:</h2>
+<p>Neyron tarmoqning i-qatlamidagi jarayon quyidagicha ifodalanadi:</p>
+<p class="formula">a<sup>[i]</sup> = activation(W<sup>[i]</sup> * a<sup>[i-1]</sup> + b<sup>[i]</sup>)</p>
+<p>Bu yerda:</p>
+<ul>
+  <li><code>a<sup>[i]</sup></code> - i-qatlamning chiqish qiymati</li>
+  <li><code>W<sup>[i]</sup></code> - i-qatlam og‘irliklari</li>
+  <li><code>b<sup>[i]</sup></code> - i-qatlam bias qiymatlari</li>
+</ul>
+
+<h2>Afzalliklari:</h2>
+<ul>
+  <li>Oddiy va tez hisoblash jarayoni.</li>
+  <li>Neyron tarmoq chiqishini bashorat qilish imkonini beradi.</li>
+</ul>
+
+<h2>Cheklovlari:</h2>
+<ul>
+  <li>Faollashtirish funksiyasi va og‘irliklarning noto‘g‘ri tanlanishi model ishlashini yomonlashtirishi mumkin.</li>
+  <li>Tarmoq juda chuqur bo‘lsa, gradientning yo‘qolishi yoki o‘sishi muammosi yuzaga kelishi mumkin.</li>
+</ul>
+
+<p>Oldinga tarqalish jarayoni neyron tarmoqlarni o‘rgatishning muhim qismidir. Keyingi qadam orqaga tarqalish (backpropagation) yordamida og‘irliklarni yangilashdir.</p>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yo‘qotish Funksiyasi</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          margin: 20px;
+      }
+      h1 {
+          color: #2c3e50;
+      }
+      ul {
+          margin-left: 20px;
+      }
+      li {
+          margin-bottom: 10px;
+      }
+      .formula {
+          font-family: 'Courier New', Courier, monospace;
+          background-color: #ecf0f1;
+          padding: 2px 5px;
+          border-radius: 4px;
+      }
+  </style>
+</head>
+<body>
+<h1>Yo‘qotish Funksiyasi</h1>
+<p><strong>Yo‘qotish funksiyasi</strong> neyron tarmoqning bashoratlari va haqiqiy qiymatlar o‘rtasidagi farqni o‘lchaydigan matematik funksiya hisoblanadi. Bu funksiya neyron tarmoqni o‘rgatish jarayonida asosiy ko‘rsatkich sifatida ishlatiladi.</p>
+
+<h2>Yo‘qotish Funksiyasining Maqsadi</h2>
+<p>Yo‘qotish funksiyasi neyron tarmoq tomonidan qilingan xatoliklarni aniqlaydi va ushbu xatolikni minimallashtirish uchun og‘irliklar va biaslarni yangilashga imkon beradi. Bu orqaga tarqalish (backpropagation) jarayonida foydalaniladi.</p>
+
+<h2>Yo‘qotish Funksiyasini Hisoblash:</h2>
+<p>Yo‘qotish funksiyasi tanlangan model va muammoning turiga bog‘liq. Quyida ba’zi keng tarqalgan yo‘qotish funksiyalari ko‘rsatilgan:</p>
+
+<h3>1. O‘rtacha kvadratik xato (Mean Squared Error, MSE)</h3>
+<p><strong>Formulasi:</strong></p>
+<p class="formula">MSE = (1 / N) * Σ (y<sub>true</sub> - y<sub>pred</sub>)<sup>2</sup></p>
+<p>Bu funksiya haqiqiy qiymatlar (<code>y<sub>true</sub></code>) va bashorat qilingan qiymatlar (<code>y<sub>pred</sub></code>) o‘rtasidagi kvadratik farqni o‘lchaydi. MSE ko‘proq regressiya muammolarida qo‘llaniladi.</p>
+
+<h3>2. O‘rtacha absolyut xato (Mean Absolute Error, MAE)</h3>
+<p><strong>Formulasi:</strong></p>
+<p class="formula">MAE = (1 / N) * Σ |y<sub>true</sub> - y<sub>pred</sub>|</p>
+<p>MAE bashorat va haqiqiy qiymatlar orasidagi absolyut farqni hisoblaydi va regressiya muammolarida ishlatiladi.</p>
+
+<h3>3. Kross-entropiya (Cross-Entropy Loss)</h3>
+<p><strong>Formulasi:</strong></p>
+<p class="formula">L = -Σ y<sub>true</sub> * log(y<sub>pred</sub>)</p>
+<p>Bu funksiya ko‘p klassli klassifikatsiya vazifalarida ishlatiladi. Kross-entropiya neyron tarmoqning ehtimolliklarining haqiqiy qiymatlarga yaqinligini o‘lchaydi.</p>
+
+<h3>4. Hinge Loss</h3>
+<p><strong>Formulasi:</strong></p>
+<p class="formula">L = max(0, 1 - y<sub>true</sub> * y<sub>pred</sub>)</p>
+<p>Bu funksiya asosan ikkilik klassifikatsiyada, ayniqsa support vector machines (SVM) bilan ishlatiladi.</p>
+
+<h2>Yo‘qotish Funksiyasini Tanlash</h2>
+<ul>
+  <li><strong>Regressiya:</strong> MSE yoki MAE ishlatiladi.</li>
+  <li><strong>Klassifikatsiya:</strong> Cross-Entropy Loss yoki Hinge Loss qo‘llaniladi.</li>
+  <li><strong>Ko‘p klassli klassifikatsiya:</strong> Softmax bilan birga Cross-Entropy Loss ishlatiladi.</li>
+</ul>
+
+<h2>Afzalliklari:</h2>
+<ul>
+  <li>Modelning bashoratlari va haqiqiy qiymatlar orasidagi farqni aniq ifodalaydi.</li>
+  <li>Modelni optimallashtirishga yordam beradi.</li>
+</ul>
+
+<h2>Kamchiliklari:</h2>
+<ul>
+  <li>Noto‘g‘ri tanlangan yo‘qotish funksiyasi modelning yomon ishlashiga olib kelishi mumkin.</li>
+  <li>Ba’zi yo‘qotish funksiyalari yuqori hisoblash xarajatlariga ega.</li>
+</ul>
+
+<p>Yo‘qotish funksiyasi neyron tarmoqlarning asosiy komponenti bo‘lib, u tarmoqni o‘rgatishda qanchalik samarali ekanligini belgilaydi.</p>
+</body>
+</html>

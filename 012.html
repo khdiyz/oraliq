@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regularizatsiya Usullari</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          line-height: 1.6;
+          margin: 20px;
+      }
+      h1 {
+          color: #2c3e50;
+      }
+      ul {
+          margin-left: 20px;
+      }
+      li {
+          margin-bottom: 10px;
+      }
+      .formula {
+          font-family: 'Courier New', Courier, monospace;
+          background-color: #ecf0f1;
+          padding: 2px 5px;
+          border-radius: 4px;
+      }
+  </style>
+</head>
+<body>
+<h1>Regularizatsiya Usullari (L1, L2, Dropout)</h1>
+<p><strong>Regularizatsiya</strong> - bu modelning umumlashtirish qobiliyatini yaxshilash va ortiqcha moslashuvni (overfitting) oldini olish uchun ishlatiladigan texnikadir. Regularizatsiya yordamida modelni yanada umumiyroq qilish mumkin, bu esa u yangi, ko‘rinmas ma’lumotlarga ham yaxshi javob berishiga yordam beradi. Quyida keng tarqalgan regularizatsiya usullari keltirilgan.</p>
+
+<h2>L1 Regularizatsiya (Lasso)</h2>
+<p><strong>L1 regularizatsiya</strong>, yoki <em>Lasso</em>, modelga penalti qo‘shish orqali ortiqcha og‘irliklarga qarshi kurashadi. L1 regularizatsiya og‘irliklarning ba’zi qiymatlarini nolga tenglashtiradi, bu esa modelni siqadi va yanada soddalashtiradi.</p>
+<p><strong>Formulasi:</strong></p>
+<p class="formula">L = Loss + λ * Σ |w<sub>i</sub>|</p>
+<p>Bu yerda:</p>
+<ul>
+  <li><code>Loss</code> - modelning yo‘qotish funksiyasi.</li>
+  <li><code>λ</code> - regularizatsiya omili.</li>
+  <li><code>w<sub>i</sub></code> - og‘irliklar.</li>
+</ul>
+<p>L1 regularizatsiya ba’zi og‘irliklarni nolga tenglashtirishi sababli, bu usul <strong>modelni soddalashtirish</strong> va eng muhim xususiyatlarni tanlashga yordam beradi.</p>
+
+<h2>L2 Regularizatsiya (Ridge)</h2>
+<p><strong>L2 regularizatsiya</strong>, yoki <em>Ridge</em>, og‘irliklar kvadratining yig‘indisini penalizatsiya qiladi. L2 regularizatsiya og‘irliklarning kattaligini kamaytiradi, lekin ular nolga tenglashmaydi. Bu usul modelni ortiqcha moslashuvdan himoya qiladi, lekin xususiyatlarni faqat kamaytiradi, nolga tenglashtirmaydi.</p>
+<p><strong>Formulasi:</strong></p>
+<p class="formula">L = Loss + λ * Σ w<sub>i</sub><sup>2</sup></p>
+<p>L2 regularizatsiya modelga o‘rganish jarayonida og‘irliklarni kichikroq qilishni ta’minlaydi, bu esa <strong>modelning murakkabligini kamaytiradi</strong>.</p>
+
+<h2>Dropout</h2>
+<p><strong>Dropout</strong> - bu neyron tarmoqni o‘rgatishda tasodifiy neyronlarni vaqtinchalik “o‘chirish” (dropout) usulidir. Bu usul modelni o‘rgatishda tarmoqning ba’zi qismlarini tasodifiy tanlab olib tashlashga yordam beradi, shu orqali modelning o‘zgaruvchanligini oshiradi va ortiqcha moslashuvni oldini oladi.</p>
+<p><strong>Qanday ishlaydi?</strong></p>
+<ul>
+  <li>Tarmoqni o‘rgatish jarayonida har bir neyronni tasodifiy ravishda o‘chirish (nolga tenglashtirish) amalga oshiriladi.</li>
+  <li>O‘rgatish jarayoni davomida faqat tasodifiy tanlangan neyronlar ishlatiladi.</li>
+  <li>Test qilish jarayonida esa barcha neyronlar ishlatiladi, lekin og‘irliklar o‘rgatish jarayonida olingan ehtimolliklar bilan ko‘paytiriladi.</li>
+</ul>
+
+<h2>Afzalliklari:</h2>
+<ul>
+  <li><strong>Overfittingni kamaytiradi:</strong> Regularizatsiya modelni ortiqcha moslashuvdan himoya qiladi va uning umumlashtirish qobiliyatini yaxshilaydi.</li>
+  <li><strong>Modelni soddalashtiradi:</strong> L1 regularizatsiya ba’zi og‘irliklarni nolga tenglashtirib, modelni soddalashtiradi.</li>
+  <li><strong>Tarmoqni yanada moslashuvchan qiladi:</strong> Dropout modelni ko‘proq moslashuvchan qiladi va yanada mustahkamlashtiradi.</li>
+</ul>
+
+<h2>Kamchiliklari:</h2>
+<ul>
+  <li><strong>O‘rganish jarayonini sekinlashtiradi:</strong> Regularizatsiya usullari o‘rganish jarayonini sekinlashtirishi mumkin.</li>
+  <li><strong>Hyperparametrlarni sozlash zarurati:</strong> λ (regularizatsiya omili) yoki dropout ehtimolligi kabi parametrlarni to‘g‘ri sozlash kerak bo‘ladi.</li>
+</ul>
+
+<h2>Qachon ishlatiladi?</h2>
+<ul>
+  <li><strong>Overfitting:</strong> Agar model overfitting bilan muammoga duch kelsa, regularizatsiya usullarini qo‘llash kerak.</li>
+  <li><strong>Modelning murakkabligi:</strong> Agar model juda murakkab bo‘lsa va ko‘p parametrlarni o‘z ichiga olsa, L1 yoki L2 regularizatsiya yordamida modelni soddalashtirish mumkin.</li>
+</ul>
+
+<p>Regularizatsiya usullari neyron tarmoqni o‘rgatishda samarali yordamchi vositalardir va ortiqcha moslashuvdan (overfitting) himoya qiladi, bu esa modelning haqiqiy dunyo sharoitida yaxshiroq ishlashiga yordam beradi.</p>
+</body>
+</html>
