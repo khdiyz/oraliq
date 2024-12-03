@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRU, LSTM, BRNN va BLSTM Arxitekturalarining Vazifalari</title>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>15. GRU, LSTM, BRNN va BLSTM Arxitekturalarining Qaysi Biri Qaysi Vazifalar Uchun Mos?</h1>
+
+    <h2>GRU (Gated Recurrent Unit)</h2>
+    <p><strong>GRU</strong> — takroriy neyron tarmoqlarning soddalashtirilgan turi bo‘lib, uzoq muddatli va qisqa muddatli bog‘liqliklarni boshqarish uchun maxsus eshik mexanizmlaridan foydalanadi.</p>
+    <h3>Qo‘llanilish sohalari:</h3>
+    <ul>
+        <li>Resurslar cheklangan tizimlar (kamroq parametr va tezroq ishlov berish).</li>
+        <li>Tabiiy tilni qayta ishlash (matn tasnifi, tarjima).</li>
+        <li>Vaqt qatorlari tahlili (ob-havo prognozi, moliyaviy ma'lumotlarni tahlil qilish).</li>
+    </ul>
+
+    <h2>LSTM (Long Short-Term Memory)</h2>
+    <p><strong>LSTM</strong> uzoq muddatli bog‘liqliklarni saqlashda yaxshiroq ishlaydi. LSTM qo‘shimcha "cell state" ga ega bo‘lib, uzoq muddatli ma'lumotni samarali boshqaradi.</p>
+    <h3>Qo‘llanilish sohalari:</h3>
+    <ul>
+        <li>Uzoq muddatli bog‘liqlikni talab qiluvchi masalalar (masalan, matn yozish yoki musiqa yaratish).</li>
+        <li>Nutqni qayta ishlash (nutq tan olish va sintez qilish).</li>
+        <li>Video tahlil (ketma-ket kadrlardan naqshlarni aniqlash).</li>
+    </ul>
+
+    <h2>BRNN (Bidirectional Recurrent Neural Network)</h2>
+    <p><strong>BRNN</strong> ketma-ket ma'lumotlarni qayta ishlashda ma'lumotni oldinga va orqaga oqimlar bilan tahlil qiladi. Bu arxitektura ma'lumotning kelgusi holatlarini hisoblashda qo‘llaniladi.</p>
+    <h3>Qo‘llanilish sohalari:</h3>
+    <ul>
+        <li>Matnlar orasidagi bog‘liqlikni aniqlash (masalan, mashina tarjimasi).</li>
+        <li>Nutq tan olish va ovozli buyruqlarni qayta ishlash.</li>
+        <li>Tabiiy tilni qayta ishlashda yuqori aniqlik talab qiluvchi masalalar.</li>
+    </ul>
+
+    <h2>BLSTM (Bidirectional LSTM)</h2>
+    <p><strong>BLSTM</strong> LSTM va BRNN kombinatsiyasidir. BLSTM uzoq muddatli va qisqa muddatli bog‘liqliklarni oldinga va orqaga oqimlarda birgalikda qayta ishlaydi.</p>
+    <h3>Qo‘llanilish sohalari:</h3>
+    <ul>
+        <li>Matnli ketma-ketlik tahlili (masalan, sentiment aniqlash).</li>
+        <li>Nutqni tanib olishda murakkab naqshlarni aniqlash.</li>
+        <li>Biologik ma'lumotlarni tahlil qilish (genom tahlili).</li>
+    </ul>
+
+    <h2>Xulosa</h2>
+    <p>Tanlangan arxitektura vazifaga va resurs cheklovlariga bog‘liq:</p>
+    <ul>
+        <li><strong>GRU:</strong> Tezroq va kamroq resurs talab qiladigan masalalar uchun mos.</li>
+        <li><strong>LSTM:</strong> Uzoq muddatli bog‘liqlikni chuqur o‘rganishni talab qiluvchi masalalar uchun.</li>
+        <li><strong>BRNN:</strong> Ketma-ketlikda kelajakdagi va o‘tgan ma'lumotni birgalikda tahlil qilish uchun.</li>
+        <li><strong>BLSTM:</strong> Murakkab ketma-ketliklarni chuqur tahlil qilish uchun eng mos.</li>
+    </ul>
+</body>
+</html>
