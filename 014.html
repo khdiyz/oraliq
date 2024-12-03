@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNN Ketma-ket Ishlov Berish Masalalarida Qanday Ishlatiladi?</title>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+        .code {
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            font-family: Consolas, "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>14. RNN Ketma-ket Ishlov Berish Masalalarida Qanday Ishlatiladi?</h1>
+
+    <h2>Ketma-ket Ishlov Berish Masalalari</h2>
+    <p>RNN (Recurrent Neural Network) vaqtga bog‘liq ketma-ketliklarni o‘rganish va tahlil qilish uchun ishlatiladi. Bu tarmoqning asosiy maqsadi ketma-ket ma'lumotlarni qayta ishlashda oldingi holatlarni eslab, yangi kiruvchi ma'lumotlarni hisoblashda foydalanishdir.</p>
+
+    <h2>RNN Ishlash Printsipi</h2>
+    <p>RNN ketma-ketliklar bilan ishlashda quyidagi printsipni qo‘llaydi:</p>
+    <p>
+        $$h_t = f(W_h \cdot h_{t-1} + W_x \cdot x_t + b_h)$$
+    </p>
+    <p>Bu yerda:</p>
+    <ul>
+        <li><strong>\(h_t\):</strong> Hozirgi holat (hidden state).</li>
+        <li><strong>\(h_{t-1}\):</strong> Oldingi vaqt birligidagi holat.</li>
+        <li><strong>\(x_t\):</strong> Hozirgi vaqt birligidagi kirish ma'lumotlari.</li>
+        <li><strong>\(W_h\):</strong> Holat uchun vazn matrisi.</li>
+        <li><strong>\(W_x\):</strong> Kirish uchun vazn matrisi.</li>
+        <li><strong>\(b_h\):</strong> Ofset (bias).</li>
+        <li><strong>\(f\):</strong> Faollashtirish funksiyasi.</li>
+    </ul>
+
+    <h2>RNN Masalalarga Qanday Moslashadi?</h2>
+    <p>RNN turli xil ketma-ketlik masalalariga moslashadi:</p>
+    <ul>
+        <li><strong>Bir kirish va bir chiqish:</strong> Masalan, sentiment aniqlashda butun matn asosida bir natija qaytaradi.</li>
+        <li><strong>Bir kirish va ko‘p chiqish:</strong> Masalan, tasvirga asoslangan subtitr yaratishda ishlatiladi.</li>
+        <li><strong>Ko‘p kirish va bir chiqish:</strong> Masalan, ko‘p vaqtli qatorlar asosida bitta natija (ob-havo prognozi).</li>
+        <li><strong>Ko‘p kirish va ko‘p chiqish:</strong> Masalan, video tahlil qilishda yoki mashina tarjimasida.</li>
+    </ul>
+
+    <h2>RNN Masalalaridagi Qo‘llanilishi</h2>
+    <p>RNN quyidagi ketma-ket ishlov berish masalalarida keng qo‘llaniladi:</p>
+    <ul>
+        <li><strong>Tabiiy tilni qayta ishlash (NLP):</strong> Matnni tasniflash, mashina tarjimasi, nutqni matnga aylantirish.</li>
+        <li><strong>Vaqt qatorlarini tahlil qilish:</strong> Ob-havo prognozi, fond bozori tahlili.</li>
+        <li><strong>Nutqni qayta ishlash:</strong> Nutqni aniqlash, ovozli buyruqlarni bajarish.</li>
+        <li><strong>Video tahlili:</strong> Harakatlarni aniqlash, video transkripsiya.</li>
+    </ul>
+
+    <h2>Afzalliklari</h2>
+    <ul>
+        <li>Ketma-ket ma'lumotlarni qayta ishlash qobiliyati.</li>
+        <li>O‘rganish jarayonida vaqtga bog‘liq o‘zgarishlarni tahlil qilish.</li>
+    </ul>
+
+    <h2>Kamchiliklari</h2>
+    <ul>
+        <li>Gradientlarning yo‘qolishi va portlashi muammosi.</li>
+        <li>Hisoblashning murakkabligi.</li>
+        <li>Uzun muddatli bog‘lanishni tahlil qilish qiyinligi.</li>
+    </ul>
+
+    <h2>LSTM va GRU Modellarining Ahamiyati</h2>
+    <p>RNN'ning kamchiliklarini bartaraf etish uchun quyidagi modellar ishlab chiqilgan:</p>
+    <ul>
+        <li><strong>LSTM:</strong> Uzun muddatli bog‘liqlikni saqlash uchun maxsus xujayralarni ishlatadi.</li>
+        <li><strong>GRU:</strong> Soddalashtirilgan versiya bo‘lib, kamroq parametrlar talab qiladi.</li>
+    </ul>
+</body>
+</html>
