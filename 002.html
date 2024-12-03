@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma'lumotlarni qayta ishlash</title>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ma'lumotlarni qayta ishlash: normallashtirish, augmentatsiyalash va qayta ishlash. (2-savolning javobi)</h1>
+
+    <p><strong>Ma'lumotlarni qayta ishlash</strong> — bu algoritmlar uchun mos keladigan shaklda ma'lumotlarni tayyorlash jarayoni. Bu jarayon sifatli va barqaror natijalarga erishish uchun juda muhimdir.</p>
+
+    <h2>1. Normallashtirish</h2>
+    <p>Normallashtirish ma'lumotlarni mos keladigan diapazonga olib keladi. Bu modelning tez va barqaror ishlashi uchun muhimdir.</p>
+    <h3>Usullari:</h3>
+    <ul>
+        <li><strong>Min-Max Scaling</strong>: Ma'lumotlarni [0, 1] yoki [-1, 1] diapazonga moslashtiradi.
+            <p>$$x' = \frac{x - x_{\text{min}}}{x_{\text{max}} - x_{\text{min}}}$$</p>
+        </li>
+        <li><strong>Z-Score Normalization (Standartlashtirish)</strong>: Ma'lumotlarni o'rtacha qiymati 0 va standart og'ish 1 bo'lishini ta'minlaydi.
+            <p>$$x' = \frac{x - \mu}{\sigma}$$</p>
+        </li>
+        <li><strong>Log Normalization</strong>: Katta qiymatlarni kichraytirish uchun logarifmik o'lcham ishlatiladi.
+            <p>$$x' = \log(1 + x)$$</p>
+        </li>
+    </ul>
+    <p><strong>Qachon ishlatiladi?</strong><br>
+       - Ma'lumotlarda katta qiymatlar farqi mavjud bo'lganda.<br>
+       - Neyron tarmoqlar yoki masofaga asoslangan algoritmlar (KNN, SVM) bilan ishlashda.
+    </p>
+
+    <h2>2. Augmentatsiyalash</h2>
+    <p><strong>Augmentatsiya</strong> — bu asosiy ma'lumotlardan yangi namunalar yaratish orqali trening to'plamini kengaytirish. Bu modelni overfittingdan himoya qiladi va umumlashtirish qobiliyatini yaxshilaydi.</p>
+    
+    <h3>Tasvir ma'lumotlari uchun usullari:</h3>
+    <ul>
+        <li><strong>Aylantirish (Rotation)</strong>: Tasvirni ma'lum burchakka burish.</li>
+        <li><strong>Qirqish (Cropping)</strong>: Tasvirning ma'lum qismini tanlash.</li>
+        <li><strong>O‘lchamini o‘zgartirish (Resizing)</strong>: Tasvir hajmini o‘zgartirish.</li>
+        <li><strong>Akslantirish (Flipping)</strong>: Tasvirni gorizontal yoki vertikal akslantirish.</li>
+        <li><strong>Yoritishni o‘zgartirish (Brightness Adjustment)</strong>: Tasvir yorug‘ligini oshirish yoki kamaytirish.</li>
+        <li><strong>Shovqin qo‘shish (Adding Noise)</strong>: Rasmga tasodifiy shovqin qo‘shish.</li>
+    </ul>
+
+    <h3>Matn uchun usullari:</h3>
+    <ul>
+        <li><strong>Sinonim almashish (Synonym Replacement)</strong>: So‘zlarni sinonimlarga almashtirish.</li>
+        <li><strong>Tartibni o‘zgartirish (Shuffling)</strong>: So‘zlarni tartibini o‘zgartirish.</li>
+        <li><strong>Tasodifiy o‘chirish (Random Deletion)</strong>: Ayrim so‘zlarni olib tashlash.</li>
+    </ul>
+
+    <p><strong>Qachon ishlatiladi?</strong><br>
+       - Ma'lumotlar hajmi yetarli bo‘lmaganda.<br>
+       - Modelni turli sharoitlarga moslashtirish zarur bo‘lganda.
+    </p>
+
+    <h2>3. Qayta ishlash (Preprocessing)</h2>
+    <p>Bu bosqichda ma'lumotlarni modelga moslash uchun tayyorlanadi.</p>
+    <h3>Usullari:</h3>
+    <ul>
+        <li><strong>Tozalash</strong>: Yo‘qolgan qiymatlarni to‘ldirish yoki olib tashlash. Chalg‘ituvchi qiymatlarni aniqlash va ulardan qutulish.</li>
+        <li><strong>Ma’lumotlarni kodlash (Encoding)</strong>: Kategoriyalarni one-hot encoding yoki label encoding orqali raqamlashtirish.</li>
+        <li><strong>Ma’lumotlarni bo‘lish (Splitting)</strong>: Ma'lumotlarni training, validation, va test to'plamlariga bo'lish.</li>
+        <li><strong>O‘lchamni moslashtirish</strong>: Tasvirlarni tarmoq talabiga mos keladigan hajmga o‘zgartirish.</li>
+    </ul>
+
+    <h3>Xulosa</h3>
+    <p>Ma'lumotlarni qayta ishlash, ayniqsa normallashtirish va augmentatsiyalash, chuqur o'qitish jarayonida modelning barqaror va samarali ishlashini ta'minlaydi. Har bir bosqich algoritm talablariga mos ravishda bajarilishi kerak, chunki bu jarayon sifatli model qurishda muhim rol o‘ynaydi.</p>
+</body>
+</html>
