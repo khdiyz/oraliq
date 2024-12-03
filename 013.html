@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takroriy Neyron Tarmoq (RNN) Nima va Uning Asosiy Xususiyatlari?</title>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+        .code {
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            font-family: Consolas, "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>13. Takroriy Neyron Tarmoq (RNN) Nima va Uning Asosiy Xususiyatlari?</h1>
+
+    <h2>Takroriy Neyron Tarmoq (RNN) Nima?</h2>
+    <p><strong>Takroriy Neyron Tarmoq (Recurrent Neural Network, RNN)</strong> vaqt bo‘yicha ketma-ket ma'lumotlarni qayta ishlash uchun mo‘ljallangan neyron tarmoq modelidir. RNN'ning asosiy farqi shundaki, u ma'lumotning oldingi holatini eslab, kelgusi holatni hisoblash uchun foydalanadi.</p>
+
+    <h2>RNN Ishlash Prinsipi</h2>
+    <p>RNN har bir vaqt birligi uchun quyidagi matematik operatsiyani bajaradi:</p>
+    <p>
+        $$h_t = f(W_h \cdot h_{t-1} + W_x \cdot x_t + b_h)$$
+    </p>
+    <p>Bu yerda:</p>
+    <ul>
+        <li>\(h_t\): Hozirgi holat (hidden state).</li>
+        <li>\(h_{t-1}\): Oldingi vaqt birligidagi holat.</li>
+        <li>\(x_t\): Hozirgi vaqt birligidagi kirish ma'lumotlari.</li>
+        <li>\(W_h\): Holat uchun vazn matrisi.</li>
+        <li>\(W_x\): Kirish uchun vazn matrisi.</li>
+        <li>\(b_h\): Ofset (bias).</li>
+        <li>\(f\): Faollashtirish funksiyasi (odatda tanh yoki ReLU).</li>
+    </ul>
+
+    <h2>RNN'ning Asosiy Xususiyatlari</h2>
+    <p>RNN'lar quyidagi asosiy xususiyatlarga ega:</p>
+    <ul>
+        <li><strong>Vaqt ketma-ketliklarni qayta ishlash:</strong> RNN vaqtga bog‘liq ma'lumotlarni, masalan, matnlar, nutq va vaqt qatorlarini qayta ishlashda ishlatiladi.</li>
+        <li><strong>Holatni saqlash:</strong> RNN oldingi vaqt birligidagi ma'lumotlarni eslab qoladi va yangi vaqt birligidagi hisob-kitoblar uchun foydalanadi.</li>
+        <li><strong>Parametrlarni ulash:</strong> RNN barcha vaqt birligida bir xil vaznlarni ishlatadi, bu esa modelni soddalashtiradi va resurslarni tejaydi.</li>
+        <li><strong>O‘rganish qobiliyati:</strong> RNN vaqt bo‘yicha bog‘liqlikni tahlil qilish uchun moslashadi.</li>
+    </ul>
+
+    <h2>RNN'ning Afzalliklari</h2>
+    <ul>
+        <li>Ketma-ket ma'lumotlar bilan ishlash imkoniyati.</li>
+        <li>Vaqtga bog‘liq jarayonlarni o‘rganish qobiliyati.</li>
+    </ul>
+
+    <h2>RNN'ning Kamchiliklari</h2>
+    <ul>
+        <li><strong>Gradientlarning yo‘qolishi:</strong> Uzoq vaqtga bog‘liq ketma-ketliklarni o‘rganishda gradientlarning yo‘qolish muammosi yuzaga keladi.</li>
+        <li><strong>Hisoblashning qiyinligi:</strong> Murakkab strukturalar va uzoq vaqtli bog‘liqliklarni tahlil qilish ko‘p hisob-kitobni talab qiladi.</li>
+    </ul>
+
+    <h2>Takomillashgan RNN Turlar</h2>
+    <p>Gradientlarning yo‘qolishi muammosini bartaraf etish uchun quyidagi modellar ishlab chiqilgan:</p>
+    <ul>
+        <li><strong>LSTM (Long Short-Term Memory):</strong> Uzun muddatli bog‘liqliklarni saqlash uchun maxsus eslab qolish xujayralarini ishlatadi.</li>
+        <li><strong>GRU (Gated Recurrent Unit):</strong> LSTM'ning soddalashtirilgan versiyasi bo‘lib, kamroq parametrlar bilan ishlaydi.</li>
+    </ul>
+</body>
+</html>
