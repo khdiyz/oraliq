@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Kutubxonalari va Vositalar, Sun'iy Neyron Tarmog‘ining Asosiy Komponentlari</title>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+        .answer {
+            margin-top: 10px;
+        }
+        .code {
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            font-family: Consolas, "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>3. Python Kutubxonalari va Vositalar, Google Colab Platformasi, NumPy va Pandas, Sun'iy Neyron Tarmog‘ining Asosiy Komponentlari</h1>
+
+    <h2>Google Colab Platformasi</h2>
+    <p><strong>Google Colab</strong> - bu Python dasturlash tilida ishlash uchun onlayn platformadir. U Python kodini bulutda bajarish imkonini beradi va foydalanuvchilar uchun GPU yoki TPU resurslaridan foydalanishni ta'minlaydi. Google Colab yordamida foydalanuvchilar jupyter notebokslari yaratishlari mumkin. Bu platforma ma'lumotlarni tahlil qilish, mashinani o‘rganish (ML) va sun'iy intellekt (AI) loyihalari uchun juda qulaydir.</p>
+
+    <h2>NumPy va Pandas</h2>
+    <p><strong>NumPy</strong> - bu Python kutubxonasi bo‘lib, asosan sonli hisoblashlar va matematik funksiyalar uchun mo‘ljallangan. NumPy ko‘p o‘lchovli massivlar (arrays) yaratish va ular bilan ishlashni osonlashtiradi. NumPy ning asosiy komponentlari massivlar va ularni boshqarish uchun turli xil funksiyalar, masalan, arifmetik amallar, agregat funksiyalar va matematika hisob-kitoblarini amalga oshirish imkonini beradi.</p>
+    
+    <p><strong>Pandas</strong> - bu ma'lumotlar tahlili va manipulyatsiyasi uchun mo‘ljallangan Python kutubxonasi. Pandas kutubxonasi ma'lumotlar ramkalarini (DataFrame) yaratish va manipulyatsiya qilish, hamda jadval shaklidagi ma'lumotlarni tahlil qilish uchun juda qulay vosita hisoblanadi. Pandas yordamida ma'lumotlarni tozalash, tahlil qilish, vizualizatsiya qilish va boshqa ko‘plab amallarni osonlik bilan bajarish mumkin.</p>
+
+    <h2>Sun'iy Neyron Tarmog‘ining Asosiy Komponentlari</h2>
+    <p><strong>Sun'iy neyron tarmoqlari (SNT)</strong> - bu inson miyasi asosida qurilgan matematik modellardir. Ular ma'lumotlarni qayta ishlash va o‘rganish uchun foydalaniladi. Neyron tarmog‘ining asosiy komponentlari quyidagilardan iborat:</p>
+    <ul>
+        <li><strong>Qatlamlar (Layers)</strong>: Neyron tarmog‘ining har bir qismi. Qatlamlar quyidagilardan iborat:
+            <ul>
+                <li><strong>Kiruvchi qatlam (Input Layer)</strong>: Tarmoqni boshlovchi qatlam, ma'lumotlar shu qatlamga kiradi.</li>
+                <li><strong>Yashirin qatlamlar (Hidden Layers)</strong>: Neyron tarmog‘ining ichki qatlamlari, bu qatlamlarda ma'lumotlar qayta ishlanadi.</li>
+                <li><strong>Chiquvchi qatlam (Output Layer)</strong>: Modelning natijasi chiqadigan qatlam.</li>
+            </ul>
+        </li>
+        <li><strong>Neyronlar (Neurons)</strong>: Har bir qatlamdagi alohida elementlar bo‘lib, ular kiruvchi ma'lumotlarni ishlaydi va natijani chiqishga uzatadi.</li>
+        <li><strong>Aktivatsiya funktsiyasi (Activation Function)</strong>: Neyronning chiqishini hisoblashda ishlatiladi, masalan, Sigmoid, ReLU, Tanh.</li>
+    </ul>
+
+    <h2>Sodda Perseptron Misoli</h2>
+    <p>Sodda perseptron bir qatlamli neyron tarmog‘idir va quyidagi tarzda ishlaydi:</p>
+    <ul>
+        <li><strong>Qadam 1:</strong> Kiruvchi ma'lumotlar x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub> olinadi.</li>
+        <li><strong>Qadam 2:</strong> Har bir kiruvchi ma'lumot uchun og‘irliklar w<sub>1</sub>, w<sub>2</sub>, ..., w<sub>n</sub> beriladi.</li>
+        <li><strong>Qadam 3:</strong> Og‘irliklar va kiruvchi ma'lumotlar ko‘paytiriladi va yig‘iladi:
+            <br>
+            <strong>z = Σ(w<sub>i</sub> x<sub>i</sub>) + b</strong>
+        </li>
+        <li><strong>Qadam 4:</strong> Aktivatsiya funktsiyasidan o‘tgan natija chiqishga uzatiladi:
+            <br>
+            <strong>y = σ(z)</strong>
+        </li>
+    </ul>
+
+    <h2>Neyron Tarmoq Printsipi</h2>
+    <p>Neyron tarmog‘i asosan quyidagi printsipga asoslanadi:</p>
+    <ul>
+        <li>Har bir neyron kiruvchi qiymatlarni qabul qiladi, ular og‘irliklar (weights) orqali ko‘paytiriladi, va bias (nolinchi qiymat) qo‘shiladi.</li>
+        <li>Shu hisoblangan qiymat, aktivatsiya funktsiyasidan o‘tkaziladi va natija chiqishga uzatiladi.</li>
+    </ul>
+
+    <h3>Sxematik Ifodalash</h3>
+    <p>Neyronning sxematik ifodasi quyidagicha:</p>
+    <ul>
+        <li>Kiruvchi qiymatlar x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>.</li>
+        <li>Og‘irliklar w<sub>1</sub>, w<sub>2</sub>, ..., w<sub>n</sub>.</li>
+        <li>Bias b va aktivatsiya funktsiyasi σ.</li>
+    </ul>
+</body>
+</html>
