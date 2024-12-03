@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pooling Qatlam</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Pooling Qatlam</h1>
+
+<p>Pooling qatlam konvolyutsion neyron tarmoqlarning (<strong>CNN</strong>) muhim qismidir va uning vazifasi asosan kiruvchi xaritalardagi xususiyatlarni siqib chiqarish, tarmoqning samaradorligini oshirish va umumlashuv qobiliyatini yaxshilashdir.</p>
+
+<h2>Pooling Qatlam Vazifalari</h2>
+
+<ol>
+    <li><strong>O‘lchamni qisqartirish (Dimensionality Reduction):</strong>
+        <p>Pooling kiruvchi xaritaning fazoviy o‘lchamlarini (width va height) kamaytiradi. Bu hisoblash xarajatlarini kamaytirib, modelni yengillashtiradi.</p>
+        <p>Formula: Agar kiruvchi xaritaning o‘lchami \( H \times W \) va pooling o‘lchami \( P \times P \) bo‘lsa, chiqish o‘lchami:</p>
+        \[
+        \text{Output size} = \left\lfloor \frac{H}{P} \right\rfloor \times \left\lfloor \frac{W}{P} \right\rfloor
+        \]
+    </li>
+    <li><strong>Hususiyatlarni muhimligini saqlash:</strong>
+        <p>Har bir pooling maydonidan asosiy ma'lumotni (masalan, eng katta yoki o‘rtacha qiymatni) saqlaydi.</p>
+    </li>
+    <li><strong>Overfittingni kamaytirish:</strong>
+        <p>O‘lchamni qisqartirish bilan tarmoqdagi parametrlar sonini kamaytiradi, bu esa haddan tashqari moslashuv (overfitting) xavfini kamaytiradi.</p>
+    </li>
+    <li><strong>Kichik o‘zgarishlarga nisbatan barqarorlik:</strong>
+        <p>Pooling kichik siljishlar, aylanishlar yoki shovqinlarga tarmoqni kamroq sezgir qiladi.</p>
+    </li>
+</ol>
+
+<h2>Pooling Turlari</h2>
+
+<h3>1. Max Pooling</h3>
+<p>Har bir pooling maydonidan eng katta qiymatni tanlaydi. Bu usul xususiyatlarning eng muhim qismlarini ajratib oladi.</p>
+<p>Formula:</p>
+\[
+y_{i,j} = \max(x_{m,n}), \quad (m, n) \in P_{i,j}
+\]
+<p>Bu yerda \( P_{i,j} \) - \( (i, j) \)-maydonning koordinatalari.</p>
+
+<p><strong>Misol:</strong></p>
+<pre>
+Kiruvchi xarita:
+[
+  [1, 3, 2, 1],
+  [4, 8, 6, 2],
+  [1, 7, 5, 3],
+  [2, 9, 8, 4]
+]
+
+Pooling o‘lchami 2 x 2:
+
+Natija:
+[
+  [8, 6],
+  [9, 8]
+]
+</pre>
+
+<h3>2. Average Pooling</h3>
+<p>Har bir pooling maydonidan qiymatlarning o‘rtachasini hisoblaydi. Bu usul xususiyatlarni "yumshoqroq" tarzda siqadi.</p>
+<p>Formula:</p>
+\[
+y_{i,j} = \frac{1}{|P_{i,j}|} \sum_{(m, n) \in P_{i,j}} x_{m,n}
+\]
+<p><strong>Misol:</strong></p>
+<pre>
+Kiruvchi xarita:
+[
+  [1, 3, 2, 1],
+  [4, 8, 6, 2],
+  [1, 7, 5, 3],
+  [2, 9, 8, 4]
+]
+
+Pooling o‘lchami 2 x 2:
+
+Natija:
+[
+  [4, 4.25],
+  [4.75, 5]
+]
+</pre>
+
+<h3>3. Global Pooling</h3>
+<p>Barcha xaritalarni bitta qiymatga qisqartiradi (masalan, global maksimal yoki o‘rtacha qiymat). Bu usul ko‘pincha klassifikatsiya qatlamiga yaqin joyda ishlatiladi.</p>
+
+<h2>Poolingning Amaliy Foydalari</h2>
+<ol>
+    <li><strong>Modelning ko‘p qirrali xususiyatlarni o‘rganishi:</strong> Har xil pooling turlari orqali ma'lumotlarni yaxshiroq umumlashtirish.</li>
+    <li><strong>Hajmni optimallashtirish:</strong> Masalan, 224x224 o‘lchamdagi xarita max pooling bilan bir necha marta qisqartirilganda chiqish o‘lchami 7x7 bo‘lishi mumkin.</li>
+    <li><strong>Kichik o‘zgarishlarga bardoshlik:</strong> Kichik burilish yoki joylashuv o‘zgarishlari natijaga sezilarli ta'sir qilmaydi.</li>
+</ol>
+
+<p>Pooling qatlam CNN uchun zarur element bo‘lib, u tarmoqni yanada kuchli, samarali va bardoshli qilish uchun asosiy vositalardan biri hisoblanadi.</p>
+
+</body>
+</html>
