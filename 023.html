@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pooling Qatlamlarning Turlari</title>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>23. Hajmni Kamaytirish uchun Pooling Qatlamlarning Qaysi Turlari Qo‘llaniladi?</h1>
+
+    <h2>Kirish</h2>
+    <p>Pooling qatlamlari neyron tarmoqdagi ma'lumotlar hajmini kamaytirish uchun qo‘llaniladi. Ular xususiyat xaritalarini siqib, tarmoqni samarali ishlashiga va ortiqcha ma'lumotlardan qochishga yordam beradi. Pooling qatlami asosiy vazifalari:</p>
+    <ul>
+        <li>O‘lchamlarni kichraytirish.</li>
+        <li>Tarmoqning umumiylashishini yaxshilash.</li>
+        <li>Hisoblash yukini kamaytirish.</li>
+    </ul>
+
+    <h2>Pooling Qatlamlarining Asosiy Turlari</h2>
+    <h3>1. Max Pooling</h3>
+    <p>Max pooling har bir kichik maydon (filter o‘lchami) ichidagi eng katta qiymatni tanlaydi. Bu usul xususiyatlarning eng muhim qismlarini ajratib olishga yordam beradi.</p>
+    <p>Matematik ifodasi:</p>
+    <p>
+        $$y[i, j] = \max(x[i:i+f, j:j+f])$$
+    </p>
+    <p>Bu yerda:</p>
+    <ul>
+        <li>\(x[i:i+f, j:j+f]\) — filter diapazoni (kichik maydon).</li>
+        <li>\(\max\) — maksimum qiymatni tanlash operatsiyasi.</li>
+    </ul>
+
+    <h3>2. Average Pooling</h3>
+    <p>Average pooling har bir kichik maydon ichidagi o‘rtacha qiymatni hisoblaydi. Bu usul tasvirdagi barcha xususiyatlarni nisbatan teng ravishda umumlashtiradi.</p>
+    <p>Matematik ifodasi:</p>
+    <p>
+        $$y[i, j] = \frac{1}{f^2} \sum_{m=0}^{f-1} \sum_{n=0}^{f-1} x[i+m, j+n]$$
+    </p>
+    <p>Bu yerda:</p>
+    <ul>
+        <li>\(f\) — filterning o‘lchami.</li>
+        <li>\(x[i+m, j+n]\) — kichik maydondagi qiymatlar.</li>
+    </ul>
+
+    <h3>3. Global Pooling</h3>
+    <p>Global pooling tasvirning butun xususiyat xaritasini bitta qiymatga siqadi. Bu odatda tasniflash bosqichidan oldin qo‘llaniladi.</p>
+    <ul>
+        <li><strong>Global Max Pooling:</strong> Xususiyat xaritasidagi eng katta qiymatni tanlaydi.</li>
+        <li><strong>Global Average Pooling:</strong> Xususiyat xaritasidagi barcha qiymatlarning o‘rtacha qiymatini hisoblaydi.</li>
+    </ul>
+
+    <h2>Xulosa</h2>
+    <p>Pooling qatlami hajmni kamaytirish uchun quyidagi usullardan foydalanadi:</p>
+    <ul>
+        <li><strong>Max Pooling:</strong> Eng katta qiymatni tanlash orqali.</li>
+        <li><strong>Average Pooling:</strong> O‘rtacha qiymatni hisoblash orqali.</li>
+        <li><strong>Global Pooling:</strong> Butun xaritani bitta qiymatga siqish orqali.</li>
+    </ul>
+    <p>Bu usullar neyron tarmoqning o‘lchamini qisqartirish va hisoblash samaradorligini oshirishda muhim ahamiyatga ega.</p>
+</body>
+</html>
