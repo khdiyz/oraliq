@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNN va YOLO o‘rtasidagi Asosiy Farqlar</title>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>24. Tasvirdagi Ob'ektlarni Aniqlashda CNN va YOLO o‘rtasidagi Asosiy Farqlar</h1>
+
+    <h2>Kirish</h2>
+    <p>Tasvirdagi ob'ektlarni aniqlash — bu tasvirda joylashgan ob'ektlarni topish va ularning chegaralarini belgilash jarayonidir. CNN va YOLO bu vazifani bajarish uchun ishlatiladigan asosiy texnologiyalardan biridir. Quyida ularning farqlari yoritilgan.</p>
+
+    <h2>CNN asosida Ob'ektlarni Aniqlash</h2>
+    <ul>
+        <li><strong>Bo‘laklarga ajratish:</strong> Tasvir kichik bo‘laklarga ajratiladi.</li>
+        <li><strong>Qayta ishlash:</strong> Har bir bo‘lak CNN orqali qayta ishlanadi.</li>
+        <li><strong>Kamchilik:</strong> Har bir bo‘lak alohida tahlil qilinadi, bu esa hisoblash xarajatlarini oshiradi.</li>
+    </ul>
+
+    <h2>YOLO (You Only Look Once)</h2>
+    <ul>
+        <li><strong>Barcha tasvirni bir martada tahlil qilish:</strong> YOLO tasvirni bir necha maydonlarga bo‘lmaydi.</li>
+        <li><strong>Chegaralarni aniqlash:</strong> Ob'ektlarning koordinatalarini va sinfini bir martada aniqlaydi.</li>
+        <li><strong>Tezlik:</strong> YOLO CNN-ga nisbatan tezroq ishlaydi va real vaqt rejimida foydalanish uchun mos.</li>
+    </ul>
+
+    <h2>CNN va YOLO o‘rtasidagi Solishtirma Jadvali</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Xususiyat</th>
+                <th>CNN</th>
+                <th>YOLO</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Yondashuv</strong></td>
+                <td>Tasvirni kichik qismlarga bo‘lib qayta ishlaydi.</td>
+                <td>Barcha tasvirni bir martada qayta ishlaydi.</td>
+            </tr>
+            <tr>
+                <td><strong>Hisoblash samaradorligi</strong></td>
+                <td>Nisbatan sekinroq, chunki har bir bo‘lak alohida tahlil qilinadi.</td>
+                <td>Tezroq, real vaqt rejimida ishlash uchun mos.</td>
+            </tr>
+            <tr>
+                <td><strong>Aniqlik</strong></td>
+                <td>Yuqori aniqlikka ega, lekin hisoblash xarajatlari yuqori.</td>
+                <td>Aniqlik biroz pastroq, lekin tezlik yuqori.</td>
+            </tr>
+            <tr>
+                <td><strong>Qo‘llanilishi</strong></td>
+                <td>Tibbiyot va boshqa yuqori aniqlik talab qiluvchi sohalar.</td>
+                <td>Avtonom transport vositalari va real vaqt tizimlari.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Xulosa</h2>
+    <p>CNN va YOLO algoritmlari har biri o‘ziga xos afzallik va kamchiliklarga ega. CNN aniqligi bilan ajralib tursa, YOLO tezlik va samaradorlikda ustunlik qiladi. Bu algoritmlardan qaysi birini tanlash vazifaning talablariga bog‘liq.</p>
+</body>
+</html>
