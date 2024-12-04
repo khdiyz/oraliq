@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generativ Adversarial Tarmoq (GAN) qanday ishlaydi?</title>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .formula {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-left: 3px solid #3498db;
+            margin-bottom: 20px;
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>26. Generativ Adversarial Tarmoq (GAN) qanday ishlaydi?</h1>
+
+    <h2>Kirish</h2>
+    <p>
+        Generativ adversarial tarmoq (GAN) — bu sun'iy intellektning generativ modellashga asoslangan yondashuvlaridan biri bo‘lib, ikki neyron tarmoq o‘zaro raqobatlashadi. Bu tarmoqlar:
+    </p>
+    <ul>
+        <li><strong>Generator:</strong> Yangi ma'lumotlarni yaratadi.</li>
+        <li><strong>Discriminator:</strong> Yaratuvchi ma'lumotlarni haqiqiy yoki soxta ekanligini baholaydi.</li>
+    </ul>
+
+    <h2>GANning Asosiy Ishlash Printsipi</h2>
+    <p>GAN ikki neyron tarmoq — generator va discriminator o‘rtasidagi o‘zaro ta'sirga asoslanadi:</p>
+
+    <h3>1. Generator</h3>
+    <ul>
+        <li>Tasodifiy shovqin (<em>noise</em>)ni oladi.</li>
+        <li>Haqiqiyga o‘xshash ma'lumotlarni yaratadi.</li>
+        <li>Generator maqsadi: discriminatorni chalg‘itib, yaratilgan ma'lumotlarni haqiqiy deb tan olinishiga erishish.</li>
+    </ul>
+
+    <h3>2. Discriminator</h3>
+    <ul>
+        <li>Haqiqiy ma'lumotlar va generator yaratgan ma'lumotlarni qabul qiladi.</li>
+        <li>Bu ma'lumotlarning haqiqiy yoki soxta ekanligini aniqlaydi.</li>
+        <li>Discriminator maqsadi: yaratilgan ma'lumotlarni soxta deb aniqlash.</li>
+    </ul>
+
+    <h3>3. O‘yin nazariyasi</h3>
+    <p>GAN ikkita tarmoq o‘rtasida "min-max o‘yin" orqali ishlaydi. Generator va discriminator quyidagi funktsiya bo‘yicha optimallashtiriladi:</p>
+    <div class="formula">
+        \[
+        \min_G \max_D V(D, G) = \mathbb{E}_{x \sim p_\text{data}(x)}[\log D(x)] + 
+        \mathbb{E}_{z \sim p_z(z)}[\log (1 - D(G(z)))]
+        \]
+    </div>
+    <p>Bu yerda:</p>
+    <ul>
+        <li>\( D(x) \): Discriminator haqiqiy ma'lumotlarni tan olish ehtimoli.</li>
+        <li>\( G(z) \): Generator tomonidan yaratilgan ma'lumotlar.</li>
+        <li>\( z \): Tasodifiy shovqin.</li>
+    </ul>
+
+    <h2>GANning Ishlash Bosqichlari</h2>
+    <ol>
+        <li><strong>Generator:</strong> Tasodifiy shovqindan foydalangan holda soxta ma'lumotlar yaratadi.</li>
+        <li><strong>Discriminator:</strong> Haqiqiy va soxta ma'lumotlarni qabul qilib, ularni farqlashga harakat qiladi.</li>
+        <li><strong>Optimallashtirish:</strong> Generator discriminatorni chalg‘itishga harakat qiladi, discriminator esa haqiqiy va soxta ma'lumotlarni aniqlashni o‘rganadi.</li>
+        <li>Bu jarayon GAN modelining sifatini yaxshilash uchun iterativ tarzda takrorlanadi.</li>
+    </ol>
+
+    <h2>Xulosa</h2>
+    <p>
+        GAN modeli ma'lumotlarni generatsiya qilish uchun kuchli vositadir. U kompyuter grafikasi, tasvirlarni qayta ishlash, ovoz generatsiyasi va boshqa ko‘plab sohalarda ishlatiladi. GANning asosiy kuchi generator va discriminator o‘rtasidagi raqobat orqali yanada realistik ma'lumotlar yaratish qobiliyatidadir.
+    </p>
+</body>
+</html>
