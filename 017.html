@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNN Arxitekturasining Asosiy Qatlamlari</title>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>17. CNN Arxitekturasi Qanday Asosiy Qatlamlardan Tashkil Topadi?</h1>
+
+    <h2>1. Konvolyutsiya Qatlami (Convolutional Layer)</h2>
+    <p>Bu qatlam CNN ning asosiy komponenti bo‘lib, kirish tasvirlaridan xususiyatlarni chiqarib olish uchun ishlatiladi. Filtrlar (<em>kernels</em>) yordamida tasvir ustida konvolyutsiya amallari bajariladi.</p>
+    <p>Matematik ifodasi:</p>
+    <p>
+        $$h[i, j] = \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} x[i+m, j+n] \cdot w[m, n] + b$$
+    </p>
+    <ul>
+        <li><strong>\(x[i+m, j+n]\):</strong> Kirish tasvirining qiymatlari.</li>
+        <li><strong>\(w[m, n]\):</strong> Filtrning vaznlari.</li>
+        <li><strong>\(b\):</strong> Ofset (bias).</li>
+    </ul>
+
+    <h2>2. Faollashtirish Qatlami (Activation Layer)</h2>
+    <p>Bu qatlam xususiyat xaritasiga nolinearlik qo‘shadi. CNN larda odatda ReLU (Rectified Linear Unit) faollashtirish funksiyasi ishlatiladi:</p>
+    <p>
+        $$f(x) = \max(0, x)$$
+    </p>
+
+    <h2>3. Pooling Qatlami (Pooling Layer)</h2>
+    <p>Pooling qatlami ma'lumotlarni siqish va tarmoqni umumiylashtirish uchun qo‘llaniladi. Bu qatlam tasvirning o‘lchamlarini kichraytiradi va hisoblash samaradorligini oshiradi.</p>
+    <ul>
+        <li><strong>Max Pooling:</strong> Har bir kichik qismdagi eng katta qiymatni tanlaydi.</li>
+        <li><strong>Average Pooling:</strong> Har bir kichik qismdagi o‘rtacha qiymatni hisoblaydi.</li>
+    </ul>
+
+    <h2>4. To‘liq Bog‘langan Qatlam (Fully Connected Layer)</h2>
+    <p>Bu qatlam neyronlarni to‘liq bog‘lab, yakuniy chiqishni chiqaradi. Tarmoqning oldingi qatlamlarida olingan xususiyatlar birlashtirilib, sinfga ajratish yoki bashorat uchun ishlatiladi.</p>
+
+    <h2>5. Chiqish Qatlami (Output Layer)</h2>
+    <p>Chiqish qatlami tasniflash yoki boshqa natijalarni olish uchun ishlatiladi. Masalan:</p>
+    <ul>
+        <li><strong>Softmax:</strong> Ko‘p sinfli tasniflash uchun.</li>
+        <li><strong>Sigmoid:</strong> Ikki sinfli tasniflash uchun.</li>
+    </ul>
+
+    <h2>Xulosa</h2>
+    <p>CNN arxitekturasi quyidagi asosiy qatlamlardan tashkil topgan:</p>
+    <ul>
+        <li>Konvolyutsiya qatlami</li>
+        <li>Faollashtirish qatlami</li>
+        <li>Pooling qatlami</li>
+        <li>To‘liq bog‘langan qatlam</li>
+        <li>Chiqish qatlami</li>
+    </ul>
+    <p>Ushbu qatlamlar birgalikda tasvirlardan murakkab naqshlarni aniqlashga xizmat qiladi.</p>
+</body>
+</html>
