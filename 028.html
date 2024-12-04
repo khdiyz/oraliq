@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAN yordamida tasvirlar generatsiyasi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul, ol {
+            margin-bottom: 20px;
+        }
+        .formula {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-left: 3px solid #3498db;
+            margin-bottom: 20px;
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>28. GAN yordamida tasvirlar generatsiyasi qanday amalga oshiriladi?</h1>
+
+    <h2>Kirish</h2>
+    <p>
+        Generativ adversarial tarmoqlar (GAN) tasvirlarni generatsiya qilish uchun keng qo‘llaniladi. GAN ikkita neyron tarmoqdan iborat: 
+        <strong>generator</strong> va <strong>discriminator</strong>. Bu ikkisi birgalikda ishlaydi, generator yangi tasvirlarni yaratadi, 
+        discriminator esa haqiqiy va soxta tasvirlarni farqlashga harakat qiladi.
+    </p>
+
+    <h2>GAN orqali Tasvirlar Generatsiyasi Bosqichlari</h2>
+    <ol>
+        <li>
+            <strong>Shovqin kiritish:</strong>
+            Generator tarmog‘iga tasodifiy shovqin vektori (<em>noise vector</em>) \( z \) kiritiladi. Bu shovqin latent fazodagi nuqtani ifodalaydi.
+        </li>
+        <li>
+            <strong>Generator orqali tasvir yaratish:</strong>
+            Generator tarmog‘i shovqin vektorini kiruvchi ma'lumot sifatida qabul qilib, haqiqiy tasvirga o‘xshash tasvir generatsiya qiladi.
+        </li>
+        <li>
+            <strong>Discriminator bahosi:</strong>
+            Discriminator yaratilgan tasvirni qabul qiladi va uni haqiqiy yoki soxta ekanligini aniqlashga harakat qiladi.
+        </li>
+        <li>
+            <strong>Qayta o‘rgatish:</strong>
+            Generator va discriminator baholash natijalariga ko‘ra yangilanadi:
+            <ul>
+                <li>Generator discriminatorni chalg‘itish uchun yaxshilanadi.</li>
+                <li>Discriminator haqiqiy va soxta tasvirlarni aniqroq farqlash uchun yaxshilanadi.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Iteratsion jarayon:</strong>
+            Ushbu jarayon iterativ tarzda takrorlanib, generator haqiqiyga o‘xshash tasvirlarni yaratishga o‘rgatiladi.
+        </li>
+    </ol>
+
+    <h2>GANning Optimallashtirish Funktsiyasi</h2>
+    <p>
+        GAN ikki tarmoqni "min-max o‘yin" orqali optimallashtiradi:
+    </p>
+    <div class="formula">
+        \[
+        \min_G \max_D V(D, G) = \mathbb{E}_{x \sim p_\text{data}(x)}[\log D(x)] + 
+        \mathbb{E}_{z \sim p_z(z)}[\log (1 - D(G(z)))]
+        \]
+    </div>
+    <p>Bu yerda:</p>
+    <ul>
+        <li>\( D(x) \): Discriminator haqiqiy tasvirlarni tan olish ehtimoli.</li>
+        <li>\( G(z) \): Generator tomonidan yaratilgan tasvir.</li>
+        <li>\( z \): Latent fazodagi tasodifiy shovqin.</li>
+    </ul>
+
+    <h2>Amaliy Qo‘llanilishi</h2>
+    <p>
+        GAN tasvirlarni generatsiya qilishda quyidagi amaliyotlarda ishlatiladi:
+    </p>
+    <ul>
+        <li>Yuz tasvirlarini yaratish (<em>Face Generation</em>).</li>
+        <li>Tasvirlarni o‘lchamini kattalashtirish (<em>Image Super-Resolution</em>).</li>
+        <li>Tasvir uslubi transferi (<em>Style Transfer</em>).</li>
+    </ul>
+
+    <h2>Xulosa</h2>
+    <p>
+        GAN modellari shovqinli ma'lumotlardan haqiqiyga o‘xshash tasvirlarni yaratishda samarali hisoblanadi. 
+        Ularning asosiy kuchi generator va discriminator o‘rtasidagi raqobat orqali realistik tasvirlarni yaratishdir.
+    </p>
+</body>
+</html>
