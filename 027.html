@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAN va VAE o‘rtasidagi asosiy farqlar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>27. GAN va VAE o‘rtasidagi asosiy farqlar</h1>
+
+    <h2>Kirish</h2>
+    <p>
+        GAN (Generativ Adversarial Tarmoq) va VAE (Variatsion Autoencoder) — bu ikkita generativ model bo‘lib, ular ma'lumotlar yaratishda ishlatiladi. Garchi ikkalasi ham bir xil maqsadga xizmat qilsa-da, ularning ishlash usullari va asosiy tamoyillari bir-biridan farq qiladi.
+    </p>
+
+    <h2>Asosiy Farqlar</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Xususiyat</th>
+                <th>GAN</th>
+                <th>VAE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Model arxitekturasi</strong></td>
+                <td>
+                    GAN ikkita tarmoqdan iborat: generator va discriminator. Ular bir-biriga qarshi ishlaydi.
+                </td>
+                <td>
+                    VAE encoder-decoder arxitekturasidan foydalanadi, bunda ma'lumot latent fazoga kodlanadi.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Ma'lumotlar generatsiyasi</strong></td>
+                <td>
+                    GAN soxta ma'lumotlar yaratish uchun generatorni o‘rgatadi va ularni haqiqiyga o‘xshash qiladi.
+                </td>
+                <td>
+                    VAE latent fazodan yangi ma'lumotlarni sampling orqali generatsiya qiladi.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Optimallashtirish jarayoni</strong></td>
+                <td>
+                    GAN min-max o‘yin orqali o‘rganadi. Generator discriminatorni chalg‘itishga, discriminator esa soxtalikni aniqlashga harakat qiladi.
+                </td>
+                <td>
+                    VAE Kullback-Leibler divergentsiyasidan foydalanadi va probabilistik qabul qiladi.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>O‘rganish qiyinchiligi</strong></td>
+                <td>
+                    GANning konvergentsiyasini boshqarish qiyin bo‘lishi mumkin, chunki generator va discriminator o‘rtasidagi o‘yin muvozanatni talab qiladi.
+                </td>
+                <td>
+                    VAEning o‘rganish jarayoni GANga qaraganda barqarorroq.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>Yaratilgan ma'lumot sifati</strong></td>
+                <td>
+                    GAN yaratilgan ma'lumotlarda yuqori sifatga ega.
+                </td>
+                <td>
+                    VAE yaratilgan ma'lumotlar odatda GANga qaraganda bir oz xiralashgan bo‘ladi.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Xulosa</h2>
+    <p>
+        GAN va VAE ma'lumotlarni generatsiya qilishda turli yondashuvlardan foydalanadi. 
+        <strong>GAN</strong> yuqori sifatli ma'lumot yaratishda yaxshi, ammo o‘rganish jarayoni murakkab. 
+        <strong>VAE</strong> esa barqarorroq, lekin ma'lumot sifati biroz pastroq bo‘lishi mumkin. 
+        Amaliyotda qaysi modelni tanlash vazifa talablariga va mavjud resurslarga bog‘liq.
+    </p>
+</body>
+</html>
