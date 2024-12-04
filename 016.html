@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konvolyutsion Neyron Tarmoq (CNN)</title>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>16. Konvolyutsion Neyron Tarmoq (CNN) nima va u qanday ishlaydi?</h1>
+
+    <h2>CNN nima?</h2>
+    <p><strong>Konvolyutsion Neyron Tarmoq (CNN)</strong> — bu asosan tasvirlarni tahlil qilish va ishlov berish uchun mo‘ljallangan chuqur o‘qitish modeli. CNN tasvirlardagi naqshlarni, xususiyatlarni va belgilarni aniqlashda yuqori samaradorlikka ega.</p>
+
+    <h2>CNN ning Asosiy Tuzilishi</h2>
+    <p>CNN uchta asosiy qatlamdan iborat:</p>
+    <ul>
+        <li><strong>Konvolyutsiya qatlami (Convolutional Layer):</strong> Kiruvchi tasvir ustida filtrlar (kernellar) qo‘llanadi. Har bir filtr tasvirning ma'lum bir xususiyatini (masalan, qirralar, burchaklar) aniqlaydi.</li>
+        <li><strong>Pooling qatlami (Pooling Layer):</strong> Ma'lumotlarni siqish va tarmoqni umumiylashtirish uchun ishlatiladi. Masalan, <em>Max Pooling</em> eng katta qiymatni tanlaydi.</li>
+        <li><strong>To‘liq bog‘langan qatlam (Fully Connected Layer):</strong> Neyronlar kiruvchi xususiyatlarni o‘zaro bog‘laydi va oxirgi qarorni chiqaradi.</li>
+    </ul>
+
+    <h2>CNN Ishlash Bosqichlari</h2>
+    <ol>
+        <li><strong>Konvolyutsiya:</strong> Kirish tasviriga filtrlar (kernellar) qo‘llanadi. Bu jarayon natijasida xususiyat xaritasi (<em>feature map</em>) hosil bo‘ladi.</li>
+        <li><strong>Faollashtirish funktsiyasi:</strong> ReLU (Rectified Linear Unit) kabi funksiyalar nodavriy qiymatlarni 0 ga aylantiradi.</li>
+        <li><strong>Pooling:</strong> Xususiyat xaritasini kichraytirish orqali hisoblash samaradorligini oshiradi.</li>
+        <li><strong>To‘liq bog‘langan qatlam:</strong> Xususiyatlarni birlashtirib, yakuniy natijani chiqaradi.</li>
+    </ol>
+
+    <h2>CNN Formulasi</h2>
+    <p>Konvolyutsiya jarayonining matematik ko‘rinishi:</p>
+    <p>
+        $$h[i, j] = \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} x[i+m, j+n] \cdot w[m, n] + b$$
+    </p>
+    <p>Bu yerda:</p>
+    <ul>
+        <li><strong>\(h[i, j]\):</strong> Xususiyat xaritasining qiymati.</li>
+        <li><strong>\(x[i+m, j+n]\):</strong> Kirish tasvirining qiymati.</li>
+        <li><strong>\(w[m, n]\):</strong> Filtrning vazni.</li>
+        <li><strong>\(b\):</strong> Ofset (bias).</li>
+    </ul>
+
+    <h2>CNN ning Qo‘llanilishi</h2>
+    <p>CNN quyidagi sohalarda keng qo‘llaniladi:</p>
+    <ul>
+        <li><strong>Kompyuter ko‘rish:</strong> Tasvirni tasniflash, ob'ektlarni aniqlash, yuzni aniqlash.</li>
+        <li><strong>Tabiiy tilni qayta ishlash:</strong> Matnlarni tahlil qilish.</li>
+        <li><strong>Meditsina:</strong> Tibbiy tasvirlarni tahlil qilish (masalan, rentgen).</li>
+        <li><strong>Avtonom transport vositalari:</strong> Yo‘l belgilari va ob'ektlarni aniqlash.</li>
+    </ul>
+
+    <h2>Afzalliklari</h2>
+    <ul>
+        <li>Tasvirlarni qayta ishlashda yuqori aniqlik.</li>
+        <li>Murakkab naqshlarni samarali aniqlash.</li>
+        <li>Parametrlarni avtomatik optimallashtirish.</li>
+    </ul>
+
+    <h2>Kamchiliklari</h2>
+    <ul>
+        <li>Hisoblash resurslariga yuqori talab.</li>
+        <li>O‘qitish uchun katta hajmdagi ma'lumotlar zarur.</li>
+    </ul>
+</body>
+</html>
