@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuqur O‘qitish Yordamida Tasvirni Tasniflash</title>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>22. Chuqur O‘qitish Yordamida Tasvirni Tasniflash Qanday Amalda Oshiriladi?</h1>
+
+    <h2>Kirish</h2>
+    <p>Tasvirni tasniflash — bu tasvirlarni ma'lum sinflarga ajratish jarayonidir. Chuqur o‘qitish yordamida bu jarayon odatda <strong>Konvolyutsion Neyron Tarmoq (CNN)</strong> yordamida amalga oshiriladi.</p>
+
+    <h2>Jarayonning Asosiy Bosqichlari</h2>
+    <ol>
+        <li><strong>Ma'lumotlarni tayyorlash:</strong>
+            <ul>
+                <li>Tasvirlarni yig‘ish va ularni sinflarga ajratish.</li>
+                <li>Tasvirlarni <em>normallashtirish</em> va o‘lchamlarini bir xil qilish.</li>
+                <li>Ma'lumotlarni <em>augmentatsiya</em> qilish (aylantirish, kesish, yoritishni o‘zgartirish va h.k.).</li>
+            </ul>
+        </li>
+        <li><strong>Model arxitekturasini yaratish:</strong>
+            <ul>
+                <li>Konvolyutsion qatlamlar — tasvirdan xususiyatlarni ajratib olish uchun.</li>
+                <li>Pooling qatlamlari — xususiyat xaritalarini siqish va samaradorlikni oshirish uchun.</li>
+                <li>To‘liq bog‘langan qatlamlar — xususiyatlarni tasniflash uchun.</li>
+            </ul>
+        </li>
+        <li><strong>Modelni o‘qitish:</strong>
+            <ul>
+                <li>Ma'lumotlar uchun <em>loss function</em> aniqlanadi.</li>
+                <li>Optimallashtirish algoritmlari (masalan, SGD yoki Adam) qo‘llaniladi.</li>
+                <li>Model ma'lumotlar ustida takroriy o‘qitiladi va test ma'lumotlarida sinovdan o‘tkaziladi.</li>
+            </ul>
+        </li>
+        <li><strong>Tasniflash:</strong>
+            <ul>
+                <li>Tasvir kirish sifatida tarmoqqa beriladi.</li>
+                <li>Model tasvirni xususiyatlarini tahlil qiladi va sinfga ajratadi.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>CNN Ishlash Printsipi</h2>
+    <p>Chuqur o‘qitish yordamida tasvirni tasniflash CNN orqali quyidagicha amalga oshiriladi:</p>
+    <ul>
+        <li><strong>Konvolyutsiya:</strong> Tasvirdan xususiyatlar chiqariladi.</li>
+        <li><strong>Pooling:</strong> Xususiyat xaritalari kichraytiriladi.</li>
+        <li><strong>To‘liq bog‘langan qatlam:</strong> Tasvirni sinfga ajratish uchun ishlatiladi.</li>
+        <li><strong>Softmax chiqish qatlami:</strong> Sinf ehtimolliklarini hisoblab, yakuniy qarorni chiqaradi.</li>
+    </ul>
+
+    <h2>Matematik Ifodalar</h2>
+    <p>Konvolyutsiya qatlamining matematik ifodasi:</p>
+    <p>
+        $$h[i, j] = \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} x[i+m, j+n] \cdot w[m, n] + b$$
+    </p>
+    <p>Softmax funksiyasi tasniflash uchun:</p>
+    <p>
+        $$P(y=c|x) = \frac{e^{z_c}}{\sum_{k=1}^{K} e^{z_k}}$$
+    </p>
+    <p>Bu yerda:
+        <ul>
+            <li>\(z_c\) — sinfning chiqish qiymati.</li>
+            <li>\(K\) — umumiy sinflar soni.</li>
+        </ul>
+    </p>
+
+    <h2>Qo‘llanilishi</h2>
+    <p>Chuqur o‘qitish yordamida tasvirni tasniflash quyidagi sohalarda keng qo‘llaniladi:</p>
+    <ul>
+        <li>Yuzni aniqlash va tanib olish.</li>
+        <li>Ob'ektlarni aniqlash.</li>
+        <li>Tibbiy tasvirlarni tahlil qilish.</li>
+        <li>Avtonom transport vositalarida yo‘l belgilari va to‘siqlarni aniqlash.</li>
+    </ul>
+</body>
+</html>
